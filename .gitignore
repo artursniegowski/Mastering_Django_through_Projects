@@ -54,7 +54,7 @@ venv.bak/
 ### Django ###
 *.sqlite3
 ### exception for the projects ### 
-!/01-Restaurant-Webpage-Django/db.sqlite3
+!/01-Restaurant-Website-Django/db.sqlite3
 
 #passwords
 passwords.txt
