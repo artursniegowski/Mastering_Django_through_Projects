@@ -90,10 +90,10 @@ password: admin<br>
 ![Screenshot](docs/img/02_about.png)</br>
 
 ***booking page.***</br>
-![Screenshot](docs/img/03_book.png)</br>
+![Screenshot](docs/img/04_book_after_posting.png)</br>
 
 ***booking page - after posting.***</br>
-![Screenshot](docs/img/04_book_after_posting.png)</br>
+![Screenshot](docs/img/03_book.png)</br>
 
 ***menu page.***</br>
 ![Screenshot](docs/img/05_menu.png)</br>
