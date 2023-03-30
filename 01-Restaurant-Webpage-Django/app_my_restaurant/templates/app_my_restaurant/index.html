@@ -1,0 +1,48 @@
+{% extends 'app_my_restaurant/base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <article id="hero">
+      <h1 class="heading_shadow">SPECIAL OFFER</h1>
+      <p>
+        30% Off This Weekend 
+      </p>
+      <a href="{% url 'app_my_restaurant:book' %}" class="cta"> Book now </a>
+    </article>
+  </section>
+  <section>
+    <article>
+      <h2>Our New Menu</h2>
+      <img src="{% static 'app_my_restaurant/img/grill.jpg' %}">
+      <p>
+        Our menu consists of 12-15 seasonal items based on Creole, French, and African-American culture.
+      </p>
+      <p>
+        <a href="{% url 'app_my_restaurant:menu' %}">See our new menu</a>
+      </p>
+    </article>
+    <article>
+      <h2>Book a table</h2>
+      <img src="{% static 'app_my_restaurant/img/main.jpg' %}">
+      <p>
+        Reserve your table for an Creole, French, and African-American dining experience.
+      </p>
+      <p>
+        <a href="{% url 'app_my_restaurant:book' %}">Book your table now</a>
+      </p>
+    </article>
+    <article>
+      <h2>Opening Hours</h2>
+      <img src="{% static 'app_my_restaurant/img/head_chef.jpg' %}">
+      <p>
+        The Fork & Knife Restaurant is open 7 days a week, except for public holidays. 
+      </p>
+      <ul>
+        <li>Mon - Fri: 2pm - 10pm</li>
+        <li>Sat: 2pm - 11pm</li>
+        <li>Sun: 2pm - 9pm</li>
+      </ul>
+    </article>
+  </section>
+{% endblock %}

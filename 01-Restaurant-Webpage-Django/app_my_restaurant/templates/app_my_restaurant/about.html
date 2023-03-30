@@ -1,0 +1,56 @@
+{% extends 'app_my_restaurant/base.html' %} {% load static %} 
+{% block content %}
+<section>
+  <article>
+    <h1>About Us</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <p>
+          Nestled in the heart of New Orleans, Louisiana, The Fork & Knife is a lively
+          Cajun restaurant serving up classic Southern cuisine with a modern twist.
+        </p>
+        <p>
+          The chefs draw inspiration from Creole, French, and African-American cultures
+          to create a menu of 12-15 dishes that change seasonally based on the freshest
+          ingredients available.
+        </p>
+        <p>
+          The restaurant has a vibrant and upbeat atmosphere, with colorful decor and
+          live music on weekends, making it a popular spot for a fun night out.
+        </p>
+        <p>
+          The Fork & Knife is owned by a married couple, Ray and Angela, who have been
+          passionate about Cajun cooking since they met in college in Louisiana.
+        </p>
+        <p>
+          To craft the menu, Ray relies on family recipes passed down from his
+          grandmother, while Angela experiments with new flavors and techniques to keep
+          things fresh and exciting.
+        </p>
+        <p>
+          Angela also handles the restaurant's social media accounts and has been
+          instrumental in creating a loyal fanbase for The Bayou Cafe online.
+        </p>
+      </div>
+      <!--End col-->
+
+      <!--Begin col-->
+      <div class="column">
+        <figure class="figure">
+          <img
+            src="{% static 'app_my_restaurant/img/owners.jpg' %}"
+            alt="owners"
+          />
+          <figcaption class="figure-caption">
+            Fork & Knife owners Ray and Angela.
+          </figcaption>
+        </figure>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+{% endblock %}
