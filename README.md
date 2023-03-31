@@ -14,12 +14,39 @@ The data for the website is stored in a database (sqlite but it can be switched 
 ## 02-BookStore-API-Django
 This is a robust RESTful API that facilitates easy management of books in a bookstore. It offers CRUD operations (Create, Read, Update, Delete) for interacting with a database where all the books will be stored. Currently, SQLite is used as the database, but the API has a configuration for MySQL that can be readily used.</br>
 This API is user-friendly and has two endpoints and an index page that provides an introduction to the API. The first endpoint, */api/books*, can handle:</br>
+
 - a GET request to retrieve a list of all books stored in the database,</br>
 - a POST request to add a new book to the database. To add a book.</br>
+
 For the POST request the API requires a payload containing information such as the book's 'title', 'author', 'price', and 'inventory' in JSON format sent as Form URL Encoded.</br>
-The API's second endpoint, */api/books/{bookId}*, can handle: 
+
+The API's second endpoint, */api/books/{bookId}*, can handle: </br>
+
 - a GET request to retrieve data on a single book stored in the database,</br> 
 - a PUT request to update a single book, which requires the same payload as the POST request,</br>
 - a DELETE request used to delete a single book.</br>
+
 The endpoint requires a unique book ID in the URL to reference the given book.</br>
-Overall, the 02-BookStore-API-Django is an efficient and user-friendly API that simplifies book management in a bookstore. It offers a wide range of CRUD operations for managing books in the database, making it easy to add, update, retrieve, and delete books.
+Overall, the 02-BookStore-API-Django is an efficient and user-friendly API that simplifies book management in a bookstore. It offers a wide range of CRUD operations for managing books in the database, making it easy to add, update, retrieve, and delete books.</br> 
+Additionally, unit tests have been added to this project to ensure the API is working correctly. These tests can be run with the command 'python manage.py test' in the terminal.
+
+## 03-BookStore-API-DRF
+This is an API that facilitates easy management of books in a bookstore, which is a copy of the 02-BookStore-API-Django. However, this API was developed with Django Rest Framework (DRF), a powerful and flexible toolkit for building web APIs using Django. DRF provides a range of additional features and tools that make it easier to build APIs, including built-in serialization, authentication, and testing frameworks. This project serves as a contrast to demonstrate how much easier it is to develop a simple API with DRF instead of pure Django. The API offers CRUD operations (Create, Read, Update, Delete) for interacting with a database where all the books will be stored. Currently, SQLite is used as the database, but the API has a configuration for MySQL that can be readily used.</br>
+This API is user-friendly and has two endpoints and an index page that provides an introduction to the API. The first endpoint, */api/books*, can handle:</br>
+
+- a GET request to retrieve a list of all books stored in the database, </br>
+- a POST request to add a new book to the database.</br>
+
+For the POST request, the API requires a payload containing information such as the book's 'title', 'author', 'price', and 'inventory' in JSON format sent as Form URL Encoded. </br>
+
+The API's second endpoint, */api/books/{bookId}*, can handle: </br>
+- a GET request to retrieve data on a single book stored in the database, </br>
+- a PUT request to update a single book, which requires the same payload as the POST request,</br> 
+- a DELETE request used to delete a single book.</br> 
+
+The endpoint requires a unique book ID in the URL to reference the given book.</br>
+
+DRF provides a more streamlined and consistent way to build APIs in Django, with a focus on performance, scalability, and maintainability. It also includes features like customizable pagination, schema generation, and versioning that are not available in Django out-of-the-box. This introductory project aims to showcase the usefulness of DRF.</br>
+Additionally, unit tests have been added to this project to ensure the API is working correctly. These tests can be run with the command 'python manage.py test' in the terminal.</br>
+Django Rest Framework also provides a browsable API interface that allows developers to browse and interact with the API endpoints directly from a web browser. This interface includes forms for submitting requests to the API, as well as displaying the response data in a user-friendly format. It also provides links to related resources and documentation. This makes it easy for developers to explore the API, test different endpoints, and debug any issues that might arise.
+
