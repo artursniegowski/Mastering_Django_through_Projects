@@ -16,8 +16,9 @@ This is a robust RESTful API that facilitates easy management of books in a book
 This API is user-friendly and has two endpoints and an index page that provides an introduction to the API. The first endpoint, */api/books*, can handle:</br>
 - a GET request to retrieve a list of all books stored in the database,</br>
 - a POST request to add a new book to the database. To add a book.</br>
+
 For the POST request the API requires a payload containing information such as the book's 'title', 'author', 'price', and 'inventory' in JSON format sent as Form URL Encoded.</br>
-The API's second endpoint, */api/books/{bookId}*, can handle: 
+The API's second endpoint, */api/books/{bookId}*, can handle: </br> 
 - a GET request to retrieve data on a single book stored in the database,</br> 
 - a PUT request to update a single book, which requires the same payload as the POST request,</br>
 - a DELETE request used to delete a single book.</br>
