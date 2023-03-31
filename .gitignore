@@ -1,0 +1,92 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Cython debug symbols
+cython_debug/
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+node_modules/
+.tmp/
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools
+_notes
+dwsync.xml
+
+# Environmental  variables
+.env
+.venv
+
+# Virtual enviroment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+### Django ###
+*.sqlite3
+### exception for the projects ### 
+!/01-Restaurant-Website-Django/db.sqlite3
+
+#passwords
+passwords.txt
+
+# spotipy lib 
+token.txt
+.cache
+
+# selenium - chrom driver
+*/ChromeDriver_browser/*
+# exception to the rule
+!*/ChromeDriver_browser/.gitkeep
+
+## react
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
