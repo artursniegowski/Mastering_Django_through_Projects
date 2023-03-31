@@ -58,6 +58,7 @@ The necessary steps to make the program work:</br>
 7. Now you can start the website with:<br>
 - python manage.py runserver<br>
 This will start the server in your local machine; the address will be something like: http://127.0.0.1:8000/api/, and this is where your website will be ready to play with.<br>
+8. You can also run unit test that were created in the test.py file for API testing. You can run it from your terminal with 'python manage.py test'<br>
 
 <br>
 Additional:<br>
@@ -75,6 +76,9 @@ You will need:<br>
 *'PASSWORD':os.environ.get('MYSQL_PASSWORD')*, - password that you use to authenticate the user in the database<br>
 *'HOST':'127.0.0.1'*, - host of the database to connect to<br>
 *'PORT': '3306'*, - and port for the host<br>
+
+**III. RUNNING UNIT TESTS**<br>
+You can also run unit test that were created in the test.py file for API testing. You can run it from your terminal with 'python manage.py test'<br>
 
 <br>
 You can also connect locally to a MySQL database, but first you will need to install and configure it on your local machine. For more information, follow this link: https://www.mysql.com/<br>
