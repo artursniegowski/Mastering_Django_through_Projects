@@ -4,12 +4,15 @@ This API is user-friendly and has two endpoints and an index page that provides 
 
 - a GET request to retrieve a list of all books stored in the database,</br>
 - a POST request to add a new book to the database. To add a book.</br>
+- 
 For the POST request the API requires a payload containing information such as the book's 'title', 'author', 'price', and 'inventory' in JSON format sent as Form URL Encoded.</br>
+
 The API's second endpoint, */api/books/{bookId}*, can handle: </br>
 
 - a GET request to retrieve data on a single book stored in the database,</br> 
 - a PUT request to update a single book, which requires the same payload as the POST request,</br>
 - a DELETE request used to delete a single book.</br>
+
 The endpoint requires a unique book ID in the URL to reference the given book.</br>
 Overall, the 02-BookStore-API-Django is an efficient and user-friendly API that simplifies book management in a bookstore. It offers a wide range of CRUD operations for managing books in the database, making it easy to add, update, retrieve, and delete books.
 
