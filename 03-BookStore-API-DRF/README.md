@@ -46,7 +46,7 @@ https://pypi.org/project/python-dotenv/</br>
 
 The necessary steps to make the program work:</br>
 1. Install the Python version as stated in runtime.txt (python-3.11.2)</br>
-2. Navigate in the console to the 02-BookStore-API-Django folder and install the required libraries from requirements.txt using the following command: </br>
+2. Navigate in the console to the 03-BookStore-API-DRF folder and install the required libraries from requirements.txt using the following command: </br>
 *pip install -r requirements.txt*</br>
 3. Change the name of .env.example to .env.</br>
 4. Define the Django environmental variables in .env (https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-SECRET_KEY):</br>
