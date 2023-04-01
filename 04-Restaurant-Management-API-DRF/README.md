@@ -54,7 +54,7 @@ For authentication, you have to create a new user with a valid username and pass
 |-------------------    |-------------------------------------------	|--------	|---------------------------------------------------------------------	|
 | */auth/users*         | Anyone                                     	| *POST*   	| Creates a new user with the given: 'username', 'email', 'password'' 	|
 | */auth/users/me/*     | Anyone with a valid token                 	| *GET*    	| Displays only the current user                                      	|
-| */auth/token/login/ *	| Anyone with a valid username and password 	| *POST*   	| Generates access tokens that can be used in other API calls         	|
+| */auth/token/login/*	| Anyone with a valid username and password 	| *POST*   	| Generates access tokens that can be used in other API calls         	|
 
 </br>
 You should have the Bearer Token configured as follows (example from Insomnia - and use a valid token):</br>
