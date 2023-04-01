@@ -239,6 +239,8 @@ You will need:<br>
 You can also connect locally to a MySQL database, but first you will need to install and configure it on your local machine. For more information, follow this link: https://www.mysql.com/<br>
 
 
+
+
 **II. Using the current database**<br>
 YOU CAN USE THE CURRENT databse (db.sqlite3),<br>
 then you can skip step 8 for creating content. OR you can delete it and create your own / new database. After creating the database, make sure you follow step 8 and, in particular, don't forget about adding these two groups mentioned above.<br>
