@@ -57,6 +57,7 @@ venv.bak/
 !/01-Restaurant-Website-Django/db.sqlite3
 !/02-BookStore-API-Django/db.sqlite3
 !/03-BookStore-API-DRF/db.sqlite3
+!/04-Restaurant-Management-API-DRF/db.sqlite3
 
 #passwords
 passwords.txt
