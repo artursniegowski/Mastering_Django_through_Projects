@@ -243,7 +243,7 @@ You can also connect locally to a MySQL database, but first you will need to ins
 
 **II. Using the current database**<br>
 YOU CAN USE THE CURRENT databse (db.sqlite3),<br>
-then you can skip step 8 for creating content. OR you can delete it and create your own / new database. After creating the database, make sure you follow step 8 and, in particular, don't forget about adding these two groups mentioned above.<br>
+then you can skip step 8 for creating content. OR you can delete it and create your own / new database. After creating a new database, make sure you follow step 8 and, in particular, don't forget about adding these two groups mentioned above.<br>
 
 superuser:<br>
 username: admin<br>
