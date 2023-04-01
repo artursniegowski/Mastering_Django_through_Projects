@@ -239,7 +239,7 @@ You will need:<br>
 You can also connect locally to a MySQL database, but first you will need to install and configure it on your local machine. For more information, follow this link: https://www.mysql.com/<br>
 
 
-
+<br>
 
 **II. Using the current database**<br>
 YOU CAN USE THE CURRENT databse (db.sqlite3),<br>
