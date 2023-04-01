@@ -109,11 +109,11 @@ Any other endpoints or different combinations of endpoints and methods will resu
 
 | Endpoints                                	| Group            	| Method 	| DESCRIPTION                                                	|
 |------------------------------------------	|------------------	|--------	|------------------------------------------------------------	|
-| */api/groups/manager/users *              | Manager or Admin 	| *GET*    	| List all managers.                                         	|
+| */api/groups/manager/users*               | Manager or Admin 	| *GET*    	| List all managers.                                         	|
 | */api/groups/manager/users*               | Manager or Admin 	| *POST*   	| Asigns the user in the payload to the manager group.       	|
 | */api/groups/manager/users/{userId}*      | Manager or Admin 	| *DELETE* 	| Removes this particular user from the manager group.       	|
 | */api/groups/delivery-crew/users*         | Manager or Admin 	| *GET*    	| List all delivery crew.                                    	|
-| */api/groups/delivery-crew/users *        | Manager or Admin 	| *POST*   	| Asigns the user in the payload to the delivery crew group. 	|
+| */api/groups/delivery-crew/users*         | Manager or Admin 	| *POST*   	| Asigns the user in the payload to the delivery crew group. 	|
 | */api/groups/delivery-crew/users/{userId}*| Manager or Admin 	| *DELETE* 	| Removes this particular user from the delivery crew group. 	|
 
 
