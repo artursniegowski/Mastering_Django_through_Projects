@@ -41,7 +41,7 @@ The API also includes additional tables in the database for storing information 
 
 | Endpoints 	| Group  	| Method 	| DESCRIPTION  	|
 |-----------	|--------	|--------	|--------------	|
-| */api/*     	| Anyone 	| *GET*    	| Welcome Page 	|
+| */api/*     | Anyone 	| *GET*   | Welcome Page 	|
 
 </br>
 
