@@ -299,7 +299,7 @@ There are various ways you can check the functionality of this API. Here are the
 ***checking the cart.***</br>
 ![Screenshot](docs/img/19_checking_the_cart.png)</br>
 
-***creating as order as customer, you need to send the token in the header.***</br>
+***creating an order as customer, you need to send the token in the header.***</br>
 ***all menu itesm wil be moved to order items, and the cart will get emptied.***</br>
 ***You need to specify the 'date' as YYYY-MM-DD.***</br>
 ***Status is set as false - not delivered***</br>
@@ -367,4 +367,4 @@ There are various ways you can check the functionality of this API. Here are the
 ---
 
 
-**The program was developed using python 3.11.2, Django 4.1, database - sqlite / MySQL, Django REST Framework 3.14, Djoser**
+**The RESTful API was developed using python 3.11.2, Django 4.1, database - sqlite / MySQL, Django REST Framework 3.14, Djoser**
