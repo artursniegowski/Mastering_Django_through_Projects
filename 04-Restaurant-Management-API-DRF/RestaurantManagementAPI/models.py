@@ -18,7 +18,7 @@ class MenuItem(models.Model):
     
     def __str__(self) -> str:
         return self.title
-    
+     
 class Cart(models.Model):
     # this is temporary storage for users that can add menu items before placing an order
     # a user can have only one cart at a time - this is why we need a reference to the user model
