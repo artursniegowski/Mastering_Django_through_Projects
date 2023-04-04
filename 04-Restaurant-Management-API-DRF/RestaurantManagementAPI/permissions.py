@@ -7,7 +7,7 @@ class ManagersOnlyPermission(BasePermission):
         if request.user.groups.filter(name='Manager').exists():
             return True
         return False
-
+ 
 class DeliveryCrewOnlyPermission(BasePermission):
     """persmission to distinguish only users who are in the delivery crew"""
     def has_permission(self, request, view):
