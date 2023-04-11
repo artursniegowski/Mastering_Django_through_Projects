@@ -6,7 +6,7 @@ class MenuItemFilter(FilterSet):
     min_price = NumberFilter(field_name='price',lookup_expr='gte')
     max_price = NumberFilter(field_name='price',lookup_expr='lte')
     
-    class Meta:
+    class Meta: 
         model = MenuItem
         fields = ['category__title','min_price', 'max_price']
         # you can only use atributes that were defined in the model !
