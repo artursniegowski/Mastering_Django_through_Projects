@@ -8,6 +8,6 @@ class MyCustomPaginator(PageNumberPagination):
     
     # if this is defined ordering will NOT WORK !!
     # def paginate_queryset(self, queryset, request, view=None):
-    #     ordering = 'id'
+    #     ordering = 'id' 
     #     queryset = queryset.order_by(ordering)
     #     return super().paginate_queryset(queryset, request, view)
