@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Booking App{% endblock title %}</title>
+    {% block customCSS %}
+        <link rel="stylesheet" href="{% static 'app_booking/css/styles.css' %}">
+    {% endblock customCSS %}
+</head>
+<body>
+    {% include 'app_booking/includes/header.html' %}
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    {% include 'app_booking/includes/footer.html' %}
+    {% block javascript %}
+        <script src="{% static 'app_booking/js/script.js' %}"></script>
+    {% endblock javascript %}
+</body>
+</html>
