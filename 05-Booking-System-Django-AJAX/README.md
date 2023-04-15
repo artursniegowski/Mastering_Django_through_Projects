@@ -44,8 +44,8 @@ The necessary steps to make the program work:</br>
 *pip install -r requirements.txt*</br>
 3. Change the name of .env.example to .env.</br>
 4. Define the Django environmental variables in .env (https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SECRET_KEY):</br>
-**DJANGO_SECRET_KEY**="YOUR_DJANGO_SECRET_KEY"
-**MYSQL_PASSWORD**="your_mysql_Databse_passsword" - only needed if switched to MySQL database
+**DJANGO_SECRET_KEY**="YOUR_DJANGO_SECRET_KEY"</br>
+**MYSQL_PASSWORD**="your_mysql_Databse_passsword" - only needed if switched to MySQL database</br>
 5. Run django migrations (https://docs.djangoproject.com/en/4.2/topics/migrations/).<br>
 - python manage.py makemigrations <br>
 - python manage.py migrate<br>
