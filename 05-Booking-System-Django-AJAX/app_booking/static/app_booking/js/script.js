@@ -13,3 +13,5 @@ const getCRSFToken = (formID) => {
     const csrfToken = form.querySelector('input[name="csrfmiddlewaretoken"]').value;
     return csrfToken;
 }
+
+// rest javascript code in the html templates files !
