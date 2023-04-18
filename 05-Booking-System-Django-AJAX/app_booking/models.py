@@ -7,7 +7,7 @@ class Booking(models.Model):
     date = models.DateField()
     reservation_slot = models.SmallIntegerField(default=10)
     
-    class Meta:
+    class Meta: 
         unique_together = ('date', 'reservation_slot')
     
     def __str__(self) -> str:
