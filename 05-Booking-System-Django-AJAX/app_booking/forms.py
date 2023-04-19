@@ -16,7 +16,7 @@ SLOT_CHOICES = [
     (19, '7:00 PM'),
     (20, '8:00 PM'),
 ]
-
+ 
 class BookingForm(ModelForm):
     reservation_slot = forms.ChoiceField(choices=SLOT_CHOICES, initial=SLOT_CHOICES[0])
     
