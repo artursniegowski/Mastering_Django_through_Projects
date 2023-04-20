@@ -154,7 +154,7 @@ You will need:<br>
 <br>
 You can also connect locally to a MySQL database, but first you will need to install and configure it on your local machine. For more information, follow this link: https://www.mysql.com/<br>
 
-
+<br>
 
 **II. How to test the API**<br>
 There are various ways you can check the functionality of this API. Here are the three most common ways you could do that:
