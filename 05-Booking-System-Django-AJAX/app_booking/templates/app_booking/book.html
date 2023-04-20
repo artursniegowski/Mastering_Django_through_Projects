@@ -1,0 +1,120 @@
+{% extends 'app_booking/base.html' %}
+{% block content %}
+<section>
+    <h2 id="bookingTitle">Book</h2>
+    <div>
+        <h3 id="headingTitle">Make your booking</h3>
+        <!-- <h4 >Reservation failed</h4> -->
+        <form method="POST" id="bookForm">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <input type="submit" value="Reserve">
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // setting the current date 
+            const dateNow = new Date().toISOString().split('T')[0];
+            const dateElement = document.getElementById('id_date');
+            dateElement.value = dateNow;
+
+            const timeSlotElement = document.getElementById('id_reservation_slot');
+            const nameElement = document.getElementById('id_name');
+            const formElement = document.getElementById('bookForm');
+            
+            const headingElement = document.getElementById("headingTitle");
+
+            // update all bookings
+            checkBookings();
+
+            // everytime we change the date we will update the bookings 
+            dateElement.addEventListener('change', () => {
+                checkBookings();
+            });
+
+
+            // submiting the form as post request
+            formElement.addEventListener('submit', (event) =>{
+                event.preventDefault();
+
+                const formData = {
+                    name: nameElement.value,
+                    date: dateElement.value,
+                    reservation_slot: timeSlotElement.value,
+                };
+                
+
+                fetch("{% url 'app_booking:booking-info' %}", {
+                    headers: {
+                        'Accept':'application/json',
+                        'Content-Type':'application/json',
+                        'X-CSRFToken':getCRSFToken('bookForm'),
+                    },
+                    method: 'POST',
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+
+                    const statusHeading = document.createElement('h4');
+                    const paragepahHeading = document.createElement('p');
+
+                    if (data.status === 'ok'){
+                        console.log("Booking done!");
+                        statusHeading.textContent = `Booking successful for: ${nameElement.value} on the ${dateElement.value} for ${formatTimeToAMPM(timeSlotElement.value)}`;
+                        statusHeading.classList.add('booking-success');
+                        headingElement.appendChild(statusHeading);
+                    } else {
+                        console.log(data.message);
+                        console.log("Booking failed!");
+                        statusHeading.textContent = `Booking failed for: ${nameElement.value} on the ${dateElement.value} for ${formatTimeToAMPM(timeSlotElement.value)}`;
+                        paragepahHeading.textContent = data.message;
+                        statusHeading.classList.add('booking-error');
+                        paragepahHeading.classList.add('booking-error');
+                        headingElement.appendChild(statusHeading);
+                        statusHeading.appendChild(paragepahHeading);
+                    }
+                    checkBookings();
+                })
+                .catch(error => console.log(error));
+            });
+
+            // updating time slots based on the bookings made
+            function checkBookings() {
+                fetch( "{% url 'app_booking:booking-info' %}" + "?date=" + dateElement.value, {
+                    headers: {
+                        'Accept':'application/json',
+                        'Content-Type':'application/json',
+                        'X-CSRFToken':getCRSFToken('bookForm'),
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+
+                    let reservationSlotsTaken = [];
+                    data.bookings.forEach( element => {
+                        reservationSlotsTaken.push(element.fields.reservation_slot);
+                    });
+                
+                    let slotOptions = '<option value="0" disabled>Select Time</option>';
+                    for (let index = 10; index < 21; index++) {
+                        if (data.status === 'ok' && data.bookings.length !== 0 && reservationSlotsTaken.includes(index) ) {
+                            slotOptions += `<option value="${index}" disabled>${formatTimeToAMPM(index)}</option>`;
+                        }else {
+                            slotOptions += `<option value="${index}">${formatTimeToAMPM(index)}</option>`;
+                        }
+                    }
+                    
+                    timeSlotElement.innerHTML = slotOptions;
+                    
+                })
+                .catch(error => console.log(error));
+            }
+        });
+    </script>
+{% endblock  %}

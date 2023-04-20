@@ -1,0 +1,43 @@
+In the admin panel, under categories, add the following:
+
+Category 1:
+slug: Appetizers
+title: Appetizers
+
+Menu Item #1:
+title:Bruschetta
+price:5.50
+
+Menu Item #2:
+title:Hummus and pita bread
+price:3.40
+
+
+
+Category 2:
+slug: Mains
+title: Mains
+
+Menu Item #1:
+title:Grilled salmon with roasted vegetables
+price:15.50
+
+Menu Item #2:
+title:Steak frites
+price:18.90
+
+
+
+
+Category 3:
+slug: Desserts
+title: Desserts
+
+Menu Item #1:
+title:Chocolate lava cake
+price:6.20
+
+Menu Item #2:
+title:Cheesecake
+price:5.25
+
