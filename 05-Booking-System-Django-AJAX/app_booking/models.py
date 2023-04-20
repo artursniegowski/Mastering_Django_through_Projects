@@ -4,7 +4,7 @@ from django.db import models
 class Booking(models.Model):
     """representation of a booking table"""
     name = models.CharField(max_length=150)
-    date = models.DateField()
+    date = models.DateField() 
     reservation_slot = models.SmallIntegerField(default=10)
     
     class Meta: 
