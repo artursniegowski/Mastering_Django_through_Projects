@@ -6,7 +6,7 @@ class BookingAdmin(admin.ModelAdmin):
     pass
 
 class MenuAdmin(admin.ModelAdmin):
-    pass
+    pass 
 
 admin.site.register(Booking, BookingAdmin)
 admin.site.register(Menu, MenuAdmin)
