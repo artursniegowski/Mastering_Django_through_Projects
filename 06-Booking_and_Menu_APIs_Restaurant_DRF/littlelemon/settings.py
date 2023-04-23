@@ -17,7 +17,7 @@ import os
 # you have to change the .env.example to .env and then define your MySQL password there
 # NOT NEEDED IN PRODUCTION
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv() 
 ##########################################################################
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
