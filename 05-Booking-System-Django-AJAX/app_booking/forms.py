@@ -22,7 +22,7 @@ class BookingForm(ModelForm):
     
     class Meta:
         model = Booking
-        fields = "__all__"
+        fields = "__all__" 
         
         widgets = {
             'date': forms.DateInput(
