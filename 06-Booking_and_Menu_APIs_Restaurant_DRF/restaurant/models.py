@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-# Create your models here.
+# Create your models here. 
 class Booking(models.Model):
     name = models.CharField(max_length=255)
     # max length 6 digits - chnged to more rational number like 0-999
