@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # TODO: DJANGO_SECRET_KEY needs to be defined as env variable !
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
- 
+  
 # SECURITY WARNING: don't run with debug turned on in production! 
 # TODO: change to False for production!
 DEBUG = True
