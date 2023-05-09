@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import sqlalchemy
+import sqlalchemy 
 from sqlalchemy.orm import scoped_session, sessionmaker
 ########################################################################
 # just for your local machine !! - to use vriables in the .env file
