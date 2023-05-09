@@ -1,0 +1,41 @@
+{% extends 'app_add_models/base.html' %}
+
+{% block content %}
+<table class="table container-md">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Email</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for user in all_users %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ user.email }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>
+                    <form action="{% url 'app_add_models:delete_user' pk=user.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="link-danger link-underline-opacity-0">X</button>
+                    </form>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td>Add users first!</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+
+
+
