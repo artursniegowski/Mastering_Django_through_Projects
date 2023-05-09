@@ -1,0 +1,39 @@
+SUPERUSER:
+id: 1
+username: admin
+email: admin@admin.com
+password: admin
+token:96097e6687208dbe8b93395cc1c4ac35ed0e6f55
+
+
+MANAGER 1:
+id: 2
+username: bob
+email: bob@bob.com
+password: bobtester
+token:6675cc2733272b81347b0d7fc3e2318ae1199eb8
+
+
+DELIVERY_CREW 1:
+id: 3
+username: mark
+email: mark@mark.com
+password: bobtester
+token:54eea808713b46005934d57de26dfc7e128fee35
+
+
+CUSTOMER 1:
+id: 4
+username: sam
+email: sam@sam.com
+password: bobtester
+token:014ebd8bcd33f501e86281767f56e00e6c69c2ed
+
+
+CUSTOMER 2:
+id: 5
+username: gary
+email: gary@gary.com
+password: bobtester
+token:4fab1854c0114573a972fbb212ce1d4195a8008c
+

@@ -1,0 +1,63 @@
+// https://dbdiagram.io/
+
+Table User {
+  id integer [primary key]
+  password password
+  last_login datetime
+  is_superuser bool
+  username varchar(150)
+  first_name varchar(150)
+  last_name varchar(150)
+  email varchar(255)
+  is_staff bool
+  is_active bool
+  date_joined datetime
+}
+
+Table Category {
+  id integer [primary key]
+  slug slug
+  title varchar(255)
+}
+
+Table MenuItem {
+  id integer [primary key]
+  title varchar(255)
+  price decimal(max_digits=6, decimal_places=2)
+  featured bool
+  category_id integer
+}
+
+Table Cart {
+  id integer [primary key]
+  user_id integer
+  menuitem_id integer
+  quantity integer
+  unit_price decimal(max_digits=6, decimal_places=2)
+  price decimal(max_digits=6, decimal_places=2)
+}
+
+Table Order {
+  id integer [primary key]
+  user_id integer
+  delivery_crew_id integer
+  status bool
+  total decimal(max_digits=6, decimal_places=2)
+  date date
+}
+
+Table OrderItem {
+  id integer [primary key]
+  order_id integer
+  quantity integer
+  unit_price decimal(max_digits=6, decimal_places=2)
+  price decimal(max_digits=6, decimal_places=2)
+}
+
+Ref: MenuItem.category_id > Category.id // many-to-one
+Ref: Cart.user_id > User.id
+Ref: Cart.menuitem_id > MenuItem.id
+Ref: Order.user_id > User.id
+Ref: Order.delivery_crew_id > User.id
+Ref: OrderItem.order_id > Order.id
+
