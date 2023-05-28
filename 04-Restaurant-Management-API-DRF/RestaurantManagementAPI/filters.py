@@ -8,7 +8,7 @@ class MenuItemFilter(FilterSet):
     
     class Meta: 
         model = MenuItem
-        fields = ['category__title','min_price', 'max_price']
+        fields = ['category__title','min_price', 'max_price'] 
         # you can only use atributes that were defined in the model !
         # fields = {
         #     'category__title': ['icontains'], # make it case insensitive
