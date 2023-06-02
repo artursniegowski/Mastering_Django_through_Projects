@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
   
 from pathlib import Path
-import os
+import os 
 ########################################################################
 # just for your local machine !! - to use vriables in the .env file
 # you have to change the .env.example to .env and then define your MySQL password there
