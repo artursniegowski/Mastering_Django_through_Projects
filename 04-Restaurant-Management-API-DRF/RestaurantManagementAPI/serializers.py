@@ -6,7 +6,7 @@ from django.db import transaction
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Category
+        model = Category 
         fields = ['id','slug', 'title']
 
 class MenuItemSerializer(serializers.ModelSerializer):
