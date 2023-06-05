@@ -1,0 +1,21 @@
+{% load app_funding_custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking extension</title>
+</head>
+<body>
+    <h1>Hi {{ booking.user.username }}!</h1>
+    <p>Your booking from {{ booking.booking_date|timezone_localtime|format_datetime:"%d.%m.%Y" }} for the project {{ bookig.project.name }} has expired.</p>
+    <p>You can extend your booking for the next 60 days.</p>
+    <p>You can click the bellow link to extend the booking. It will be active for the next {{ booking.token.expiration_hours }} hours.</p>
+    <p>Link is active until: {{ booking.token.expiration_date|timezone_localtime|format_datetime:"%d.%m.%Y %H:%M" }}.</p>
+    <a href="{{ unique_activation_link }}">Extend Booking</a>
+    <br>
+    <p>Best Regards,</p>
+    <p>The Team</p>
+</body>
+</html>

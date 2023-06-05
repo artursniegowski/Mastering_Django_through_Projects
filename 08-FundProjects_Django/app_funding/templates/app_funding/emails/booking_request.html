@@ -1,0 +1,20 @@
+{% load app_funding_custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking request</title>
+</head>
+<body>
+    <h1>Hi {{ follower.user.username }}!</h1>
+    <p>You are following since {{ follower.following_since|timezone_localtime|format_datetime:"%d.%m.%Y" }} the project {{ follower.project.name }}.</p>
+    <p>You can also support the project from 50 USD.</p>
+    <p>Bellow is the link that will lead you to the suppport booking website.</p>
+    <a href="{{ booking_link }}">Project Support booking.</a>
+    <br>
+    <p>Best Regards,</p>
+    <p>The Team</p>
+</body>
+</html>

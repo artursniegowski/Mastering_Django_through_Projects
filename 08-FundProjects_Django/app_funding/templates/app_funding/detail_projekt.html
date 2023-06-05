@@ -1,0 +1,166 @@
+{% extends 'funding/base.html' %}
+{% load app_funding_custom_tags %}
+{% block content %}
+    <div  class="container min-vh-100 my-2 py-5" > 
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Content for the 2/3 width column -->
+                <h2>{{ project.name }}</h2>
+                <div>
+                    {{ project.description|safe }}
+                </div>
+              </div>
+            <div class="col-md-4">
+                <!-- Content for the 1/3 width column -->
+                <h2>{{ project.project_money_reached }} <span>&#36;</span> out of {{ project.project_money_total }} <span>&#36;</span></h2>
+                <div class="progress progress-custom">
+                    {% with project.project_money_reached|divide_to_num_percent:project.project_money_total as percentage_of_total %}
+                        <div class="progress-bar progress-bar-custom" role="progressbar" style="width: {{ percentage_of_total }}%;" aria-valuenow="{{percentage_of_total}}" aria-valuemin="0" aria-valuemax="100">{{percentage_of_total}}%</div>
+                    {% endwith %}
+                </div>
+                <p class="py-3">
+                    {% if project.get_all_valid_bookings %}
+                        {% with project.get_all_valid_bookings|get_oldest_booking as first_booking %}
+                            <span class="fw-semibold fs-4">{{ project.get_all_valid_bookings|length }}</span> users suport the project if it starts until  <span class="fw-semibold fs-4">{{ first_booking.booking_date_expire|timezone_localtime|format_datetime:"%d.%m.%Y" }}</span>.
+                        {% endwith %}
+                    {% else %}
+                        Be the first to support the project.
+                    {% endif %}
+                </p>
+                <table class="table">
+                    <tbody>
+                      {% for booking in project.get_all_valid_bookings %}
+                        <tr>
+                            <td>
+                                {% if request.user == booking.user %}
+                                    {{ booking.user.client|truncatechars:10 }}
+                                {% else %}
+                                    {{ booking.user.client|truncatechars:2 }} 
+                                {% endif %}
+                            </td>
+                            <td>{{ booking.booking_amount_money }} <span>&#36;</span></td>
+                            <td>{{ booking.booking_date|timezone_localtime|format_datetime:"%d.%m.%Y %H:%M" }}</td>
+                        </tr>
+                      {% comment %} {% empty %}
+                        <tr>
+                            <td>There are no booking yet.</td>
+                        </tr> {% endcomment %}
+                      {% endfor %}
+                    </tbody>
+                </table>
+                {% if project.get_all_valid_bookings %}
+                    <div class="border border-dark p-1 my-5">
+                        {% with project.get_all_valid_bookings|get_oldest_booking as first_booking %}
+                            {% with first_booking.booking_date_expire|time_difference as time_diff %}
+                                Suport the project in the next {{time_diff.days}} days {{time_diff.hours}} hours {{time_diff.minutes}} minutes.
+                            {% endwith %}
+                        {% endwith %}
+                        <br> 
+                        <span class="fs-6 fw-light">In order to the project to be implemented.</span>
+                    </div>
+                {% endif %}
+                <form method="post" onsubmit="confirmSubmit(event)">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="mb-3">
+                        {% comment %} <ul class="errorlist">
+                            <li>Sender is required.</li>
+                        </ul> {% endcomment %}
+                        <label for="{{ form.booking_amount_money.id_for_label }}" class="form-label">{{ form.booking_amount_money.label }}</label>
+                        {% comment %} {{ form.booking_amount_money.label_tag|add_classes:"form_control"  }} {% endcomment %}
+                        {{ form.booking_amount_money }}
+                        {{ form.booking_amount_money.errors }}
+                    </div>
+                    <p class="fs-6 fw-light">
+                        I confirm that with this booking i will have to incure costs.
+                    </p>
+                    <input type="submit" value="Book" class="btn btn-primary btn-booking-submit w-100">
+                </form>
+                <div>
+                    <p class="fs-6 fw-light pt-3">
+                        With your booking there will be the
+                    </p>
+                    <p class="fw-semibold fs-4">
+                        <span id="js-followers-count">{{ project.get_all_followers }}</span> Followers
+                    </p>
+                    <p class="fs-6 fw-light"> 
+                       getting a email notification.
+                    </p>
+                    <button id="js-follow-button" type="button" class="btn btn-secondary btn-booking-follow w-100" 
+                            data-follow-url = "{% url 'app_funding:follow' project.pk %}" data-action-for-following="{% if current_user_following_project %}un{% endif %}follow"
+                    >
+                        {% if current_user_following_project %}
+                           Unfollow the porject.
+                        {% else %}
+                            Follow the project.
+                        {% endif %}
+                    </button>   
+                </div>
+            </div>
+          </div>
+    </div>
+{% endblock  %}
+{% block javascript %}
+    {{ block.super }}
+    <script>
+        const confirmSubmit = (e) => {
+            if (!confirm("Are you sure you want to continue with the booking?")) {
+                e.preventDefault();
+            }
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            const followButton = document.getElementById("js-follow-button");
+            const followerCount = document.getElementById("js-followers-count");
+            const csrfToken = document.querySelector('input[name=csrfmiddlewaretoken]').value;
+            if (followButton) {
+                followButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    followButton.disabled = true;
+                    const url = followButton.dataset.followUrl;
+                    const followAction = followButton.dataset.actionForFollowing;
+                    fetch(url, {
+                        headers: {
+                            'Accept':'application/json',
+                            'Content-Type':'application/json',
+                            'X-CSRFToken':csrfToken,
+                        },
+                        method: 'POST',
+                        credentials: 'same-origin',
+                        body: JSON.stringify({
+                            followAction: followAction,
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            followButton.textContent = data.wording;
+                            followButton.dataset.actionForFollowing = data.datasetFollow;
+                            followerCount.textContent = data.followers
+                            followButton.classList.add("green-success-field");
+                            setTimeout( () => {
+                                followButton.classList.remove("green-success-field");
+                                followButton.disabled = false;
+                            },300);
+                        } else {
+                            followButton.classList.add("red-error-field");
+                            setTimeout( () => {
+                                followButton.classList.remove("red-error-field");
+                                followButton.disabled = false;
+                                //console.log("Error - data");
+                            },300);
+                        }
+                    })
+                    .catch( error => {
+                        //console.log(error);
+                        followButton.classList.add("red-error-field");
+                        setTimeout( () => {
+                            followButton.classList.remove("red-error-field");
+                            followButton.disabled = false;
+                            //console.log("Error - data");
+                        },300);
+                    });
+                });
+            }
+        });
+    </script>
+{% endblock javascript %}

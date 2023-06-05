@@ -1,0 +1,12 @@
+{% extends 'funding/base.html' %}
+
+{% block content %}
+<div class="container py-5 vh-100">
+    <h2 class="py-2">Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>
+{% endblock  %}

@@ -1,0 +1,8 @@
+{% extends 'funding/base.html' %}
+{% load app_funding_custom_tags %}
+{% block content %}
+<div class="container min-vh-100 my-3 py-3" > 
+    <h3>Confirmation: Booking Extension!</h3>
+    <p>You are supporting the project : {{ booking.project.name }} with {{ booking.booking_amount_money }} <span>&#36;</span> until {{ booking.booking_date_expire|timezone_localtime|format_datetime:"%d.%m.%Y" }}.</p>
+</div>
+{% endblock  %}

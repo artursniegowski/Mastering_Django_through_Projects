@@ -1,0 +1,32 @@
+{% extends 'funding/base.html' %}
+{% load app_funding_custom_tags %}
+{% block content %}
+<div class="container min-vh-100" > 
+    <div class="modal modal-sheet position-static d-block py-5" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header border-bottom-0">
+                    <h1 class="modal-title fs-5">Booking Extension</h1>
+                </div>
+                <div class="modal-body py-0">
+                    <p>The booking will be extended for the next 60 days (from now).</p>
+                    <p class="my-0">Project: {{ booking.project.name }}</p>
+                    <p class="my-0">Intro: {{ booking.project.intro }}</p>
+                    <p class="my-0">Support: {{ booking.booking_amount_money }} <span>&#36;</span></p>
+                    <p class="my-0">Original Booking date: {{ booking.booking_date|timezone_localtime|format_datetime:"%d.%m.%Y" }}</p>
+                </div>
+                <div class="modal-footer flex-column border-top-0">
+                    <form class="w-100" method="post" action="">
+                        {% csrf_token %}
+                        <button type="submit" name="extend_booking" class="btn btn-lg btn-success w-100 mx-0 mb-2">Extend Booking</button>
+                    </form>
+                    <form class="w-100" method="post" action="">
+                        {% csrf_token %}
+                        <button type="submit" name="cancel_booking" class="btn btn-lg btn-dark w-100 mx-0">Cancle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

@@ -1,0 +1,56 @@
+:root {
+    --progress-bar-green: #469c33;
+    --progress-bar-green-ligth: #73e05b;
+    --progress-bar-orange: #FFA500;
+    --follower-button-grey: #6c757d;
+    --follower-button-grey-ligth: #9ba5ad;
+    --red: #d41f1f;
+    --green: #29c240;
+}
+
+/* customzing the custom bar */
+.progress-custom{
+    background-color: var(--progress-bar-orange);
+    height: 2rem;
+}
+.progress-bar-custom{
+    background-color: var(--progress-bar-green);
+}
+
+/* errors for the form */
+.errorlist{
+    color: #FF0000;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding: 0;
+}
+.errorlist li::before {
+    /* content: "⚠️ "; */
+    content: "\26A0\FE0F ";
+    font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+/* bookign button */
+.btn-booking-submit{
+    --bs-btn-bg: var(--progress-bar-green);
+    --bs-btn-border-color: var(--progress-bar-green);
+    --bs-btn-hover-border-color: var(--progress-bar-green-ligth);
+    --bs-btn-hover-bg:var(--progress-bar-green-ligth);
+    --bs-btn-active-bg:var(--progress-bar-green);
+}
+
+/* follower project button */
+.btn-booking-follow{
+    --bs-btn-bg: var(--follower-button-grey);
+    --bs-btn-border-color: var(--follower-button-grey);
+    --bs-btn-hover-border-color: var(--follower-button-grey-ligth);
+    --bs-btn-hover-bg:var(--follower-button-grey-ligth);
+    --bs-btn-active-bg:var(--follower-button-grey);
+}
+
+.red-error-field{
+    background-color: var(--red)!important;
+}
+
+.green-success-field{
+    background-color: var(--green)!important;
+}
