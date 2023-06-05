@@ -11,7 +11,7 @@ class TemplateEmails:
     def is_included(cls, given_value: str) -> bool:
         """
         check if given value is part of the values in the class
-        """
+        """ 
         return given_value in vars(cls).values()
 
 
