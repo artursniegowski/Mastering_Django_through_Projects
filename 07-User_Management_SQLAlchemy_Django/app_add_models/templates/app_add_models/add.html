@@ -1,0 +1,12 @@
+{% extends 'app_add_models/base.html' %}
+
+{% block content %}
+    <div class="container text-center mt-5">
+        <h1>Add a new user</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <button type="submit" class="btn btn-dark">Add user</button>
+        </form>
+    </div>
+{% endblock %}
