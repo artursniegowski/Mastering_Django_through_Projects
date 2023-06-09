@@ -12,7 +12,7 @@ class Booking(models.Model):
         return f"Booking on the {self.bookingDate} for {self.no_of_guests} guests for name: {self.name}"
 
 class Menu(models.Model):
-    title = models.CharField(max_length=255, db_index=True)
+    title = models.CharField(max_length=255, db_index=True) 
     price = models.DecimalField(max_digits=10, decimal_places=2)
     # max length 5 digits - chnged to more rational number like 0-9999
     inventory = models.SmallIntegerField(validators=[MinValueValidator(0), MaxValueValidator(9999)])
