@@ -6,7 +6,7 @@ class BookingForm(ModelForm):
     class Meta:
         model = Booking
         fields = ['booking_amount_money']
-        widgets = {
+        widgets = { 
             'booking_amount_money': forms.NumberInput(attrs={'min': 50, 'class': 'form-control', 'placeholder':'USD'}),
         }
         labels = { 
