@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 }  
             })
         } 
-    };
+    }; 
     applyColorChangeField("#result_list tbody tr td.field-project_money_rest");
     
     // adding functionality to the buttons 
