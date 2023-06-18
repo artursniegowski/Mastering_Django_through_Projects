@@ -13,7 +13,7 @@ class ProjectModelTestCase(TestCase):
     def test_get_total_bookings(self):
         self.assertEqual(self.project.get_total_bookings, 0)
         # Create bookings for the project
-        Booking.objects.create(user=self.user, project=self.project, booking_amount_money=100)
+        Booking.objects.create(user=self.user, project=self.project, booking_amount_money=100) 
         Booking.objects.create(user=self.user, project=self.project, booking_amount_money=200)
         self.assertEqual(self.project.get_total_bookings, 2)
     
