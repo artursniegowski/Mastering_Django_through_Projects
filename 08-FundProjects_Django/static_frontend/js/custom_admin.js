@@ -1,6 +1,6 @@
 "use strict"
 window.addEventListener('DOMContentLoaded', () => {
-    const applyColorChangeField = (selectorCSS) => {
+    const applyColorChangeField = (selectorCSS) => { 
         // changing the color of the project field
         const fieldsProjectToChange = document.querySelectorAll(selectorCSS);
         if (fieldsProjectToChange) {
