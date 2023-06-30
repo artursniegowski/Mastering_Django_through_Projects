@@ -42,7 +42,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # these apps will add tables to the database; 
+    # these apps will add tables to the database;  
     # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
