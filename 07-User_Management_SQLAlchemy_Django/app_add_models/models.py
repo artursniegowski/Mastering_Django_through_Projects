@@ -18,7 +18,7 @@ class UserModel(Base):
     email = Column(String(100), nullable=False, unique=True)
     description = Column(String(200))
     
-    def __str__(self):
+    def __str__(self): 
         return f"{self.email}"
     
     @classmethod
