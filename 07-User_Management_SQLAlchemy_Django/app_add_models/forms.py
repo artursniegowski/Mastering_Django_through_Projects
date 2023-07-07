@@ -15,7 +15,7 @@ class UserForm(forms.Form):
         widget=forms.TextInput(attrs={'class': 'form-control'}),
     )
     email = forms.EmailField(
-        max_length=100,
+        max_length=100, 
         widget=forms.EmailInput(attrs={'class': 'form-control'}),
     )
     description = forms.CharField(
