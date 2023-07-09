@@ -14,7 +14,7 @@ SLOT_CHOICES = [
     (17, '5:00 PM'),
     (18, '6:00 PM'),
     (19, '7:00 PM'),
-    (20, '8:00 PM'),
+    (20, '8:00 PM'), 
 ]
  
 class BookingForm(ModelForm):
