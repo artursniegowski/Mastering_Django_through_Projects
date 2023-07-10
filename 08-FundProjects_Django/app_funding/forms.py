@@ -10,5 +10,5 @@ class BookingForm(ModelForm):
             'booking_amount_money': forms.NumberInput(attrs={'min': 50, 'class': 'form-control', 'placeholder':'USD'}),
         }
         labels = { 
-            'booking_amount_money': 'Your support amount, min 50.00$',
+            'booking_amount_money': 'Your support amount, min 50.00$', 
         }
