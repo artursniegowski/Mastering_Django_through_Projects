@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     },
                     method: 'POST',
                     credentials: 'same-origin',
-                })
+                }) 
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
