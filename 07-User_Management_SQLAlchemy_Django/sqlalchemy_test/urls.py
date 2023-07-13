@@ -18,6 +18,6 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path("", include('app_add_models.urls')),  
+    path("", include('app_add_models.urls')),   
     # path('admin/', admin.site.urls), 
 ]
