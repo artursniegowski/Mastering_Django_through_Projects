@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'sqlalchemy_test.wsgi.application'
 
 # connection fro sqlalchemy 
 MYSQL_URI = f"mysql+pymysql://{os.environ.get('MYSQL_USER', 'root')}:{os.environ.get('MYSQL_PASSWORD')}@{os.environ.get('MYSQL_DATABASE_HOST', '127.0.0.1')}:{os.environ.get('MYSQL_DATABASE_PORT', '3306')}/{os.environ.get('MYSQL_DATABASE_NAME')}"
-
+ 
 DATABASES = { 
     'default': {
         'NAME':os.environ.get('MYSQL_DATABASE_NAME'),
