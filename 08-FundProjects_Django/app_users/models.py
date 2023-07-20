@@ -13,5 +13,5 @@ class User(AbstractUser):
     """my custom user - that inherits from django user evertyhing
     and only adding the client relationship"""  
     # adding a relationship, each client can have multiple users 
-    # one - to many
+    # one - to many 
     client = models.ForeignKey('app_clients.Client', on_delete=models.SET_NULL, null=True, blank=True, related_name='clients') 
