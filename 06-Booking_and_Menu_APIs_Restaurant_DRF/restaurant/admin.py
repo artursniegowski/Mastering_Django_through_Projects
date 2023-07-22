@@ -8,5 +8,5 @@ class BookingAdmin(admin.ModelAdmin):
 class MenuAdmin(admin.ModelAdmin):
     pass 
 
-admin.site.register(Booking, BookingAdmin)
+admin.site.register(Booking, BookingAdmin) 
 admin.site.register(Menu, MenuAdmin)
