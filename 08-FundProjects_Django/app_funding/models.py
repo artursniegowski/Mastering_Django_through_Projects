@@ -14,7 +14,7 @@ class Project(models.Model):
     online_from = models.DateTimeField(auto_now_add=True)
     # can include html
     # {{blog.text|safe}}
-    description = models.TextField(max_length=2000, blank=False)
+    description = models.TextField(max_length=2000, blank=False) 
     calculate = models.BooleanField(default=False) 
     textbox_inner_ticket_desc = models.TextField(max_length=2000, blank=True)
     project_money_total = models.DecimalField(max_digits=10, decimal_places=2, blank=False)
