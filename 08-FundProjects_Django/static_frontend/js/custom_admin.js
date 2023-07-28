@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     } else {
                         element.classList.add('red-project-field');
                     }
-                } catch (error) {
+                } catch (error) { 
                     console.log('Error parsing float value:', error.message);
                 }  
             })
