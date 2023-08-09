@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const parsedValue = parseFloat(value);
                     if (isNaN(parsedValue)) {
                         throw new Error("Invalid float value");
-                    }
+                    } 
                     if (parsedValue<=0){
                         element.classList.add('gree-project-field');
                     } else {
