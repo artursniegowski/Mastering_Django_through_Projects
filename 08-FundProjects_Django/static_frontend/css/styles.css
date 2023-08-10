@@ -9,7 +9,7 @@
 }
 
 /* customzing the custom bar */
-.progress-custom{
+.progress-custom{ 
     background-color: var(--progress-bar-orange);
     height: 2rem;
 }
