@@ -64,7 +64,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'sqlalchemy_test.urls'
-
+ 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
