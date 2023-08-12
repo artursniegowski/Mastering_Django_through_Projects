@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     # these apps will add tables to the database;  
     # 'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
+    'django.contrib.contenttypes', 
     # 'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
