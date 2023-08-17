@@ -9,6 +9,6 @@ class CustomUserAdmin(UserAdmin):
     
     fieldsets = UserAdmin.fieldsets + (
         ('Client', {'fields': ('client',)}),  
-    )
+    ) 
     
 admin.site.register(User,CustomUserAdmin)
