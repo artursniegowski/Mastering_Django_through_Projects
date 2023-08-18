@@ -10,7 +10,7 @@ Table Client {
 Table User {
   id integer [primary key]
   password password
-  last_login datetime
+  last_login datetime 
   is_superuser bool
   username varchar(150)
   first_name varchar(150)
