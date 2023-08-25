@@ -15,7 +15,7 @@ class UsersInline(admin.TabularInline):
     # if collapsed functionality of bookings required
     classes = ('collapse',)
     
-    def has_add_permission(self, request, obj):
+    def has_add_permission(self, request, obj): 
         return False
 
 
