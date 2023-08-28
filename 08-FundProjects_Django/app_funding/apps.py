@@ -6,4 +6,4 @@ class AppFundingConfig(AppConfig):
     name = 'app_funding'
     
     def ready(self):
-        import app_funding.signals
+        import app_funding.signals 
