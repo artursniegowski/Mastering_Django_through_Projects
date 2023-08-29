@@ -11,4 +11,4 @@ class BookingForm(ModelForm):
         }
         labels = { 
             'booking_amount_money': 'Your support amount, min 50.00$', 
-        }
+        } 
