@@ -20,7 +20,7 @@ class UsersInline(admin.TabularInline):
 
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ['company','name']
+    list_display = ['company','name'] 
     fields = ['company','name', 'descritpion']
     
     # specify the inlines
