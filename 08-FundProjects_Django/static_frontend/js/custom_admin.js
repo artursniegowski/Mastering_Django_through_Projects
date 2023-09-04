@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         throw new Error("Invalid float value");
                     } 
                     if (parsedValue<=0){
-                        element.classList.add('gree-project-field');
+                        element.classList.add('gree-project-field'); 
                     } else {
                         element.classList.add('red-project-field');
                     }
