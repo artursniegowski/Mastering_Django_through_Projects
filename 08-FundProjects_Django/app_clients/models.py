@@ -7,5 +7,5 @@ class Client(models.Model):
     descritpion = models.TextField(max_length=2000, blank=True)
 
     def __str__(self) -> str: 
-        return self.company 
+        return self.company  
    
