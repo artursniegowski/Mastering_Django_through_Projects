@@ -7,3 +7,4 @@ class AppFundingConfig(AppConfig):
     
     def ready(self):
         import app_funding.signals 
+  
