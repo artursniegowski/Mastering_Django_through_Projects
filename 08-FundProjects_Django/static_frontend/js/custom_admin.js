@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
             fieldsProjectToChange.forEach( element => {
                 const value = element.innerText;
                 try {
-                    const parsedValue = parseFloat(value);
+                    const parsedValue = parseFloat(value); 
                     if (isNaN(parsedValue)) {
                         throw new Error("Invalid float value");
                     } 
