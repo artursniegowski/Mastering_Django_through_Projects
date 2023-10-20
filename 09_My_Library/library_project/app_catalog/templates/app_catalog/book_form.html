@@ -1,0 +1,12 @@
+{% extends 'library/base.html' %}
+{% block title %}My Library - Book-form{% endblock %}
+{% block content %}
+<h1>Creating a new book</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit" />
+  </form>
+{% endblock  %}

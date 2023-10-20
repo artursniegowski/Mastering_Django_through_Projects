@@ -1,0 +1,28 @@
+# this files will be ignored by Dockerfile
+# for exmaple if we had a command COPY . . 
+# this woudl copy evertyhing except what is in this file
+
+# Git
+.git
+.gitignore
+# Docker
+.docker
+
+# Python
+# this would be porbably the same
+# **/__pypackages__/ - unfortunately this is not supported by docker
+app/__pypackages__/
+app/*/__pypackages__/
+app/*/*/__pypackages__/
+app/*/*/*/__pypackages__/
+
+# enviroments
+# for files
+.env
+.venv
+# for directories
+.env/
+.venv/
+env/
+venv/
+ENV/

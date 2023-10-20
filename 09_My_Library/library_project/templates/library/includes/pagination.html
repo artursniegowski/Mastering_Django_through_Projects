@@ -1,0 +1,70 @@
+{% if is_paginated %}
+    <nav aria-label="All Books Page navigation ">
+        <ul class="pagination">
+            <li class="page-item">
+                <a 
+                    class="page-link {% if not page_obj.has_previous %}disabled{% endif %}" 
+                    href="?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% else %}1{% endif %}" 
+                    aria-label="Previous"
+                >
+                <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="?page=1">first</a></li>
+
+            <li class="page-item current-page">
+                <a class="page-link" href="?page={{ page_obj.number }}">
+                    {{ page_obj.number }}/{{ page_obj.paginator.num_pages }}
+                </a>
+            </li>
+
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last</a></li>
+            <li class="page-item">
+                <a 
+                    class="page-link {% if not page_obj.has_next %}disabled{% endif %}" 
+                    href="?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% else %}{{ page_obj.paginator.num_pages }}{% endif %}" 
+                    aria-label="Next"
+                >
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endif %}
+
+{% comment %} {% if is_paginated %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                {{ page_obj.number }}/{{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %} {% endcomment %}
+
+
+{% comment %} {% if is_paginated %}
+    <div class="pagination">
+        <span class="page-links">
+            {% if page_obj.has_previous %}
+                <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="page-current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+            {% if page_obj.has_next %}
+                <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %} {% endcomment %}

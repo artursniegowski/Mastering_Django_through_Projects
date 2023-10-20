@@ -1,0 +1,10 @@
+{% extends 'library/base.html' %}
+{% block title %}My Library - Author-delete{% endblock %}
+{% block content %}
+<h1>Delete Author</h1>
+<p>Are you sure you want to delete the author: {{ author }}?</p>
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete." />
+</form>
+{% endblock  %}

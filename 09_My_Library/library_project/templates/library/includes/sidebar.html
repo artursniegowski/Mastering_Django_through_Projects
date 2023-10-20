@@ -1,0 +1,19 @@
+<!-- Navigation-->
+<ul class="sidebar-nav">
+    <li><a href="{% url 'app_catalog:index' %}">Home</a></li>
+    <li><a href="{% url 'app_catalog:books' %}">All books</a></li>
+    <li><a href="{% url 'app_catalog:authors' %}">All authors</a></li>
+    <br>
+    {% if user.is_authenticated %}
+        <li>User: {{ user.get_username }}</li>
+        <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
+        <li><a href="{% url 'app_catalog:borrowed-books' %}">My Books</a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+    {% if perms.app_catalog.can_view_staff %}
+        <hr>
+        <li>Staff</li>
+        <li><a href="{% url 'app_catalog:borrowed-all' %}">All Borrowed</a></li>
+    {% endif %}
+</ul>

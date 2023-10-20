@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My-Library" />
+    <meta name="author" content="Arturo" />
+    <title>{% block title %}My-Library{% endblock title %}</title>
+    {% block css_block %}
+        <!-- Bootstrap icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- custom css -->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock css_block %}
+</head>
+<body>
+    {% block header %}{% endblock header %}
+    <div class="container-fluid main-library">
+        <div class="row">
+            <div class="col-sm-2">
+                {% block sidebar %}
+                    {% include 'library/includes/sidebar.html' %}
+                {% endblock sidebar %}
+            </div>
+            <main class="col-sm-10">
+                {% block content %}{% endblock content %}
+                {% block pagination %}
+                    {% include 'library/includes/pagination.html' %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+    {% block footer %}
+        {% include 'library/includes/footer.html' %}
+    {% endblock footer %}
+    {% block javascript %}
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    {% endblock javascript %}
+</body>
+</html>

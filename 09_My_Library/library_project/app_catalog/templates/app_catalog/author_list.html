@@ -1,0 +1,33 @@
+{% extends 'library/base.html' %}
+{% block title %}My Library - Author List{% endblock %}
+{% block content %}
+    <h1>
+        Author list
+        {% if perms.app_catalog.add_author and perms.app_catalog.view_author %}
+            <a class="btn btn-dark btn-lg" href='{% url "app_catalog:author-create" %}'>Add</a>
+        {% endif %}
+    </h1>
+    <ul>
+        {% for author in author_list %}
+            <li>
+                <a href="{% url 'app_catalog:author-detail' pk=author.pk %}">
+                    {{ author }}
+                    (
+                        {{ author.date_of_birth }} 
+                        - 
+                        {% if author.date_of_death %}{{ author.date_of_death }}{% endif %}
+                    )
+                </a>
+                {% if perms.app_catalog.change_author and perms.app_catalog.view_author %}
+                    <a class="py-0 btn btn-light" href='{% url "app_catalog:author-update" author.pk %}'>Update</a>
+                {% endif %}
+                {% if perms.app_catalog.delete_author and perms.app_catalog.view_author %}
+                    <a class="py-0 btn btn-danger" href='{% url "app_catalog:author-delete" author.pk %}'>X</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <h2>The library does not have any Authors yet.<h2>
+            <p>Come back later!<p>
+        {% endfor %}
+    </ul>
+{% endblock  %}

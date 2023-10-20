@@ -1,0 +1,16 @@
+{% extends 'library/base.html' %}
+{% block title %}My Library - My Books{% endblock %}
+{% block content %}
+    <h1>Borrowed books</h1>
+    <ul>
+        {% for bookinstance in object_list %}
+            <li class="{% if bookinstance.is_overdue %}text-danger{% endif %}">
+                <a href="{% url 'app_catalog:book-detail' bookinstance.book.pk %}">{{ bookinstance.book.title }}</a>
+                (Due: {{ bookinstance.due_back }})
+            </li>
+        {% empty %}
+            <h2>You dont have any books yet.<h2>
+            <p>Brows the library to find your next adventure!<p>
+        {% endfor %}
+    </ul>
+{% endblock  %}

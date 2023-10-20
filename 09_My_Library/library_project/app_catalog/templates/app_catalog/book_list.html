@@ -1,0 +1,28 @@
+{% extends 'library/base.html' %}
+{% block title %}My Library - Books{% endblock %}
+{% block content %}
+    <h1>
+        Book list
+        {% if perms.app_catalog.add_book and perms.app_catalog.view_book %}
+            <a class="btn btn-dark btn-lg" href='{% url "app_catalog:book-create" %}'>Add</a>
+        {% endif %}
+    </h1>
+    <ul>
+        {% for book in book_list %}
+            <li>
+                <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+                {% comment %} <a href="{% url 'app_catalog:book-detail' pk=book.pk %}">{{ book.title }}</a> {% endcomment %}
+                ({{ book.author }})
+                {% if perms.app_catalog.change_book and perms.app_catalog.view_book %}
+                    <a class="py-0 btn btn-light" href='{% url "app_catalog:book-update" book.pk %}'>Update</a>
+                {% endif %}
+                {% if perms.app_catalog.delete_book and perms.app_catalog.view_book %}
+                    <a class="py-0 btn btn-danger" href='{% url "app_catalog:book-delete" book.pk %}'>X</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <h2>The library does not have any books yet.<h2>
+            <p>Come back later!<p>
+        {% endfor %}
+    </ul>
+{% endblock  %}

@@ -1,0 +1,19 @@
+.main-library {
+    min-height: 90vh;
+    margin-top: 1rem;
+}
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+.copies {
+    margin-left:20px;
+    margin-top:20px;
+}
+a {
+    text-decoration: none;
+}
+.book-detail-summary, .book-detail-title {
+    margin: 0;
+    padding: 0;
+}

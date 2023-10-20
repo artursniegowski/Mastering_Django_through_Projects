@@ -1,0 +1,16 @@
+{% extends 'library/base.html' %}
+{% block title %}My Library - Author-detail{% endblock %}
+{% block content %}
+    <h1>Author: {{ author }}</h1>
+    <p class="text-muted">{{ author.date_of_birth }} - {% if author.date_of_death %}{{ author.date_of_death }}{% endif %}</p>
+    <div class="copies">
+        <h4>Books</h4>
+        {% for book in author.book_set.all %}
+          <a class="book-detail-title" href="{% url 'app_catalog:book-detail' book.pk %}">
+            <strong>{{ book.title }}</strong>
+          </a>
+          <span>({{book.bookinstance_set.all.count}})</span>
+          <p class="book-detail-summary">{{ book.summary }}</p>
+        {% endfor %}
+    </div>
+{% endblock  %}
