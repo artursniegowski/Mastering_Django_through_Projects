@@ -1,0 +1,29 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="{% url 'app_funding:home' %}">Fund-Your-Project-Django</a>
+    </div>
+    <div class="d-flex">
+        {% if request.user.is_authenticated %}
+            <!-- User is logged in -->
+            <a href="{% url 'app_users:logout' %}">
+                <button class="btn btn-outline-dark">
+                    <i class="bi bi-person-circle"></i>
+                    LogOut
+                </button>
+            </a>
+            <button class="btn btn-outline-dark">
+                <i class="bi bi-person-circle"></i>
+                {{ request.user.username }}
+            </button>
+        {% else %}
+            <!-- User is not logged in -->
+            <a href="{% url 'app_users:login' %}">
+                <button class="btn btn-outline-dark">
+                    <i class="bi bi-person-circle"></i>
+                    LogIn
+                </button>
+            </a>
+        {% endif %}
+    </div>
+</nav>

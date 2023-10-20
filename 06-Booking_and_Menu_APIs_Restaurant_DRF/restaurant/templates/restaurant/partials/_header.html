@@ -1,0 +1,12 @@
+{% load static %}
+<header>
+  <img src="{% static 'restaurant/img/logo.png' %}" />
+</header>
+<nav>
+  <ul>
+    <li><a href="{% url 'restaurant_main:home' %}">Home</a></li>
+    <li><a href="{% url 'restaurant_main:about' %}">About</a></li>
+    <li><a href="{% url 'restaurant_main:menu' %}">Menu</a></li>
+    <li><a href="{% url 'restaurant_main:book' %}">Book</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,29 @@
+{% extends 'funding/base.html' %}
+{% load app_funding_custom_tags %}
+
+{% block content %}
+<div class="container min-vh-100 my-5 py-5" >   
+    <div class="border border-warning p-2">
+        <h2 class="border-bottom">Projects</h2>
+        <div class="container">
+            <div class="row">
+              {% for project in projects %}
+                <div class="col">
+                  <h3>{{ project.name }}</h3>
+                  <p class="fs-6 fw-light">Projekt online from: {{ project.online_from|format_datetime:"%d-%m-%Y" }}</p>
+                  <p class="fs-5">{{ project.intro }}</p>
+                  <a href="{% url 'app_funding:detail-project' pk=project.pk %}"> 
+                      <button type="button" class="btn btn-outline-primary text-secondary"><span class="fw-light"> Comming soon!</span> Fund The Project</button>
+                  </a>
+                </div>
+              {% empty %}
+                <h1>There are no current projects!</h1>
+              {% endfor %}
+            </div>
+        </div>
+        <p class="fw-lighter pt-3">
+            Be part of the development and contribute to the creation of the projects.
+        </p>
+    </div>
+</div>
+{% endblock  %}

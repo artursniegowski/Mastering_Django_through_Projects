@@ -1,0 +1,118 @@
+{% extends 'app_booking/base.html' %}
+{% block content %}
+<section>
+    <h2>Home</h2>
+    <div class="listing-bookings">
+        {% csrf_token %}
+        <h3>Bookings</h3>
+        <ol id="my-booking-list">
+            <li>There aren't any bookings yet</li>
+        </ol>
+    </div>
+</section>
+{% endblock %}
+
+{% block javascript %}
+    {{  block.super }}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const getBookings = () => {
+                return new Promise((resolve, reject) => {
+                    try {
+                        return fetch("{% url 'app_booking:all-bookings' %}", {
+                            headers: {
+                                'Accept':'application/json',
+                                'Content-Type':'application/json',
+                                'X-CSRFToken':document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                            },
+                            method: 'GET',
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status === 'ok'){
+                                //console.log(data.bookings);
+                                resolve(data.bookings);
+                            } else {
+                                console.log("Error while retriving bookings!");
+                                reject(new Error("Error while retriving bookings!"));
+                            }
+                        })
+                        .catch(error => reject(error));
+                    } catch (error) {
+                        reject(error);
+                    };
+                });
+            };
+
+            function getAllBookings() {
+                return new Promise((resolve, reject) => {
+                    try {
+                        //const bookingsAll = JSON.parse('{{ all_bookings|safe }}');
+                        getBookings()
+                        .then(bookingsAll => {
+                            //console.log(bookingsAll);
+                            let bookingsElements = bookingsAll.length === 0 ? "<li>There aren't any bookings yet.</li>" : "";
+                            for (const booking of bookingsAll) {
+                                //console.log(booking.pk);
+                                bookingsElements += `<li>${booking.fields.name} made a reservation on the ${booking.fields.date} for ${formatTimeToAMPM(booking.fields.reservation_slot)}.<span class="delete-option" data-id-internal=${booking.pk}>DELETE</span></li>`;
+                            };
+                            document.getElementById('my-booking-list').innerHTML = bookingsElements;
+                            resolve();
+                        });
+                    } catch(error){
+                        reject(error);
+                    }
+                });
+            };
+
+            function addDeleteListeners() {
+                const bookingListElements = document.querySelectorAll('#my-booking-list li span');
+                // looping through each li bookingsElements
+                bookingListElements.forEach( element => {
+                    element.addEventListener("click", () => {
+                        // console.log(element.dataset.idInternal);
+                        //sending a fetch request to delete the element:
+                        const payloadData = {
+                            pk: element.dataset.idInternal,
+                        };
+                        
+                        fetch("{% url 'app_booking:booking-info' %}", {
+                            headers: {
+                                'Accept':'application/json',
+                                'Content-Type':'application/json',
+                                'X-CSRFToken':document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                            },
+                            method: 'DELETE',
+                            body: JSON.stringify(payloadData)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status === 'ok'){
+                                console.log("Booking deleted!");
+                                // udpate the list and add event listenrs to them again
+                                getAllBookings()
+                                .then(() => {
+                                    addDeleteListeners();
+                                });
+                            } else {
+                                console.log(data.message);
+                                console.log("Booking deletion failed!");
+                            }
+                            //console.log(data)
+                            
+                        })
+                        .catch(error => console.log(error));
+                    })
+                });
+            };
+
+            // making sure that first all list elements will be rendered and after 
+            // we add the vent listeners
+            getAllBookings()
+                .then(() => {
+                    addDeleteListeners();
+                });
+        });
+    </script>
+{% endblock  %}

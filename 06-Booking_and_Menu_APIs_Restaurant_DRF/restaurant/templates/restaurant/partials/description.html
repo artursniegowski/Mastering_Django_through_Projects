@@ -1,0 +1,58 @@
+<section>
+    <article>
+      <h1>{{ title }}</h1>
+      <!--Begin row-->
+      <div class="row">
+        <!--Begin col-->
+        <div class="column">
+          <p>
+              This is just the backend for the restaurant. This will cover two API endpoints. 
+              In order to use the API endpoints, users need to be authenticated and use their tokens!
+          </p>
+          <p>
+            API for browsing or adding menu items. <br>
+            <i>
+              /api/menu/items<br> 
+              /api/menu/items/&lt;int:pk&gt;<br>
+            </i>
+          </p>
+  
+          <p>
+            API for making reservations or listing the bookings.<br>
+            <i>
+                /api/bookings/tables<br>
+                /api/bookings/tables/&lt;int:pk&gt;<br>
+            </i>
+          </p>
+  
+          <p>
+            Enpoints that are used for creating new users and obtaining the tokens.<br>
+            <i>
+                /api/registration/  <br>
+                /api/registration/users/  -- for adding new users<br>
+                /api/registration/token/login/ -- for obtaining the user token <br> 
+            </i>
+          </p>
+  
+          <p>
+            Static content for the website.<br>
+            <i>
+                /restaurant/<br>
+            </i>
+          </p>
+          <p>
+            Examples:<br>
+            <i>
+                <a href="http://127.0.0.1:8000/restaurant/">http://127.0.0.1:8000/restaurant/</a><br>
+                <a href="http://127.0.0.1:8000/api/registration/users/">http://127.0.0.1:8000/api/registration/users/</a><br>
+                <a href="http://127.0.0.1:8000/api/bookings/tables">http://127.0.0.1:8000/api/bookings/tables</a><br>
+                <a href="http://127.0.0.1:8000/api/menu/items">http://127.0.0.1:8000/api/menu/items</a><br>
+            </i>
+        </p>
+        </div>
+        <!--End col-->
+        <!--End col-->
+      </div>
+      <!--End row-->
+    </article>
+  </section>

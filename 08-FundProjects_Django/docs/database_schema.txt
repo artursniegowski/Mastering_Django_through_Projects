@@ -1,0 +1,64 @@
+// https://dbdiagram.io/
+
+Table Client {
+  id integer [primary key]
+  company varchar(150, unique)
+  name varchar(150, unique)
+  descritpion varchar(2000)
+}
+
+Table User {
+  id integer [primary key]
+  password password
+  last_login datetime 
+  is_superuser bool
+  username varchar(150)
+  first_name varchar(150)
+  last_name varchar(150)
+  email varchar(255)
+  is_staff bool
+  is_active bool
+  date_joined datetime
+  client_id integer
+  booking_id integer
+  follower_id integer
+}
+
+Table Project {
+  id integer [primary key]
+  name varchar(200, unique)
+  intro varchar(200)
+  online_from datetime
+  description varchar(2000)
+  calculate bool(default)
+  textbox_inner_ticket_desc text(2000)
+  project_money_total decimal(max_digits=10, decimal_places=2)
+  booking_id integer
+  follower_id integer
+}
+
+Table Booking {
+  id integer [primary key]
+  booking_date datetime
+  booking_amount_money decimal(max_digits=10, decimal_places=2)
+}
+
+Table Follower {
+  id integer [primary key]
+  following_since datetime
+  book_request_date datetime
+}
+
+Table Token {
+  id integer [primary key]
+  token uuid4
+  created_at datetime
+  expiration_hours integer
+  booking_id integer [ref: - Booking.id]
+}
+
+Ref: User.client_id > Client.id // one-to-many
+Ref: Booking.id > User.booking_id
+Ref: Booking.id > Project.booking_id
+Ref: Follower.id > Project.follower_id
+Ref: Follower.id > User.follower_id
