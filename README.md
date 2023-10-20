@@ -98,7 +98,7 @@ Key Features:</br>
 
 Users need to be asigned to the admin group in the admin panel in order to make bookings. The eamils will be only sent if the users actually have an email address. </br>
 
-## 09_My_Library </br>
+## 09_My_Library
 09_My_Library is a dockerized django Web Application meticulously crafted with the Django framework and Dockerized for seamless deployment and scaling. It is a comprehensive library management system designed to cater to the needs of both librarians and regular users. This project leverages Docker and Docker Compose to orchestrate two services: the Django application and a PostgreSQL database. By encapsulating the application within containers, it ensures an isolated, consistent, and scalable environment.</br>
 Key Features:</br>
 - Using Models: The heart of MY_Library lies in its data structures defined using Django models. These models not only represent data entities but also facilitate efficient data management within the PostgreSQL database. It underscores Django's core strength in handling data seamlessly.</br>
