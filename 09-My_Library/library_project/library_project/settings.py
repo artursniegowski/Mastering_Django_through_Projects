@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG is 1 = True, and if DEBUG is 0 = False (or not defined, or any other)
 # retrived from the docker-composer ENV variables
-DEBUG = bool(os.environ.get('DEBUG', 0)=='1')
+DEBUG = bool(os.environ.get('DEBUG', 0)=='1') 
 
 # accessible only via specific host name
 # so you want to make sure only that hostname can be used because otherwise
