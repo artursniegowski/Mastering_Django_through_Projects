@@ -19,7 +19,7 @@ class CommandTests(SimpleTestCase):
     # we are using the database in the command to wait_for_db to check
     # that it is connected, this is why we have to silence it here
     databases = ['default']
-
+ 
     def test_wait_for_db_ready(self, patched_check: MagicMock) -> None:
         """Test waiting for database if database ready."""
         patched_check.return_value = True
