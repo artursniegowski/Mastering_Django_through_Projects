@@ -18,7 +18,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 # just for your local machine !! - to use vriables in the .env file
 # you have to change the .env.example to .env and then define your MySQL password there
 # NOT NEEDED IN PRODUCTION 
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 load_dotenv()
 ########################################################################## 
 
