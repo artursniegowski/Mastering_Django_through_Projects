@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/   
 """
 
-from pathlib import Path
+from pathlib import Path 
 import os  
 import sqlalchemy 
 from sqlalchemy.orm import scoped_session, sessionmaker
