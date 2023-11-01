@@ -12,7 +12,7 @@ class HealthCheckTests(TestCase):
         url_health_check = reverse('app_core:health-check')
         response = self.client.get(url_health_check)
         # check if the data actually is ok
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200) 
         self.assertJSONEqual(
             str(response.content, encoding='utf8'),
             {'status': 'healthy'}
