@@ -9,7 +9,7 @@ COPY ./library_project /library_project
 # as we specify precisly what we want to copy and nothing else
 
 WORKDIR /library_project
-EXPOSE 8000
+EXPOSE 8000 
 
 ARG DEV=false
 
