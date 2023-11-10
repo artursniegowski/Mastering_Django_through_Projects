@@ -13,7 +13,7 @@
 a {
     text-decoration: none;
 }
-.book-detail-summary, .book-detail-title {
+.book-detail-summary, .book-detail-title { 
     margin: 0;
     padding: 0;
 }
