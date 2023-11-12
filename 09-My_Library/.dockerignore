@@ -14,7 +14,7 @@
 app/__pypackages__/
 app/*/__pypackages__/
 app/*/*/__pypackages__/
-app/*/*/*/__pypackages__/
+app/*/*/*/__pypackages__/ 
 
 # enviroments
 # for files
