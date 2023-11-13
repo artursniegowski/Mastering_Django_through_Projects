@@ -1,0 +1,18 @@
+[submodule "15-Recipe_APP_API"]
+	path = 15-Recipe_APP_API
+	url = https://github.com/artursniegowski/Recipe_APP_API.git
+[submodule "01-Django_polls_reusable_app"]
+	path = 01-Django_polls_reusable_app
+	url = https://github.com/artursniegowski/Django_polls_reusable_app.git
+[submodule "02-Learning_Blog"]
+	path = 02-Learning_Blog
+	url = https://github.com/artursniegowski/Learning_Blog.git
+[submodule "03-Image_posting_website"]
+	path = 03-Image_posting_website
+	url = https://github.com/artursniegowski/Image_posting_website.git
+[submodule "04-Django_Posts_website"]
+	path = 04-Django_Posts_website
+	url = https://github.com/artursniegowski/Django_Posts_website.git
+[submodule "05-Financial_Blog_Wagtail_CMS"]
+	path = 05-Financial_Blog_Wagtail_CMS
+	url = https://github.com/artursniegowski/Financial_Blog_Wagtail_CMS.git

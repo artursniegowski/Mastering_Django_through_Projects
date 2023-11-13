@@ -54,11 +54,11 @@ venv.bak/
 ### Django ###
 *.sqlite3
 ### exception for the projects ### 
-!/01-Restaurant-Website-Django/db.sqlite3
-!/02-BookStore-API-Django/db.sqlite3
-!/03-BookStore-API-DRF/db.sqlite3
-!/04-Restaurant-Management-API-DRF/db.sqlite3
-!/08-FundProjects_Django/db.sqlite3
+!/06-Restaurant-Website-Django/db.sqlite3
+!/07-BookStore-API-Django/db.sqlite3
+!/08-BookStore-API-DRF/db.sqlite3
+!/09-Restaurant-Management-API-DRF/db.sqlite3
+!/13-FundProjects_Django/db.sqlite3
 
 #passwords
 passwords.txt
