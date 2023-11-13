@@ -1,0 +1,3 @@
+[submodule "Mastering_Django_through_Projects/10-Recipe_APP_API"]
+    path = Mastering_Django_through_Projects/10-Recipe_APP_API
+    url = https://github.com/artursniegowski/Recipe_APP_API
