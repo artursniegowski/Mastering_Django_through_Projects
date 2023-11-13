@@ -115,3 +115,21 @@ Key Features:</br>
 - Permission-Based User Roles: MY_Library distinguishes between two user groups - regular users and librarians. Librarians have administrative privileges to add books, authors, and renew loaned books. Regular users have access to view their own borrowed books and due dates.</br>
 - Front-end Styling: MY_Library enhances the user experience by incorporating Bootstrap.</br>
 - Efficient Pagination: To enhance the user experience, MY_Library incorporates pagination into the website. This feature ensures that large datasets, such as lists of books or authors, are presented in a user-friendly manner, improving navigation and load times for users.</br>
+
+
+## 10-Recipe_APP_API
+The Recipe API is a fully functioning and robust web application built using Python, Django, and Django REST framework. The primary goal of this project is to provide users with a powerful and user-friendly API for managing their favorite recipes. Leveraging modern technologies and industry best practices, the Recipe API offers a seamless experience for creating, organizing, and sharing recipes.</br>
+
+Technologies Used: </br>
+- AWS EC2 READY.</br>
+- Python: The core programming language used for backend development.</br>
+- Django: A high-level web framework that provides a strong foundation for building web applications.</br>
+- Django REST framework: An extension of Django that simplifies the creation of RESTful APIs.</br>
+- PostgreSQL: A powerful and scalable open-source relational database management system for data storage.</br>
+- Docker: Used for containerization, allowing easy deployment and scalability.</br>
+- Docker Hub: A platform for finding and sharing container images, facilitating smooth deployment processes.</br>
+- Swagger: Automated API documentation that makes it easy to explore and test API endpoints.</br>
+- GitHub Actions: Used for continuous integration and continuous deployment (CI/CD) to automate testing and linting whenever code is pushed to GitHub.</br>
+- Flake8: A tool for enforcing style guide rules and ensuring code quality.</br>
+- TDD (Test Driven Development): The project was developed using TDD principles, where tests were written before implementing functionality.</br>
+- Components configured for deployment: uWSGI, nginx, docker-compose. </br>
