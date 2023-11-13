@@ -10,7 +10,7 @@ COPY ./library_project /library_project
 
 WORKDIR /library_project
 EXPOSE 8000 
-
+ 
 ARG DEV=false
 
 # adding dep to run psycopg: postgresql-libs postgresql-dev gcc musl-dev
