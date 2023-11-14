@@ -168,7 +168,7 @@ next, navigate to the main folder and run the command to build the Docker image.
 
 ---
 
-## GOOD to know:</br>
+## GOOD to know:
 1. You can check the documentation offline - [View PDF](docs/Papyrus_Portal_API_doc.pdf)</br>
 The documentation includes all the endpoints and how to use them. Additionally you can also use: </br>
 - http://localhost:8080/supersecret/ - for the admin django - this can be adjusted as needed with the **ADMIN_URL** </br>
