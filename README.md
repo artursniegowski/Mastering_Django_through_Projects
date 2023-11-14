@@ -158,3 +158,43 @@ Technologies Used: </br>
 - Flake8: A tool for enforcing style guide rules and ensuring code quality.</br>
 - TDD (Test Driven Development): The project was developed using TDD principles, where tests were written before implementing functionality.</br>
 - Components configured for deployment: uWSGI, nginx, docker-compose. </br>
+
+
+## 16-Papyrus_Portal </br>
+The project is an extensive backend service developed using Django REST Framework, dedicated to managing a diverse set of services through an API. The core functionalities of the API include user authentication, article management, and user interaction mechanisms. While it focuses on backend service, the project is designed for integration with front-end systems and encourages user interface development for full application usage. This versatile API serves as an exemplary solution for building publication platforms, offering features akin to those found in popular online publishing platforms, empowering developers to create their own publication services.</br>
+
+Authentication & User Management:</br>
+Users register and log in via their email and password. Upon registration, users receive an activation link to verify their accounts, facilitating access through JWT tokens. The session authentication system ensures heightened security by rendering JWT tokens valid for a limited duration—15 minutes. If a refresh token is not sent within a specified time frame, the user gets logged out, adhering to stringent security protocols.</br>
+
+Article Management & User Interaction:</br>
+Authenticated users can interact with articles by creating, searching, bookmarking, rating, and associating tags. Users can also engage in various activities such as bookmarking, rating, and clapping articles, following other users.</br>
+
+Technology Stack & Services:</br>
+- Docker & Docker-Compose: Docker containers provide an environment for managing Elasticsearch, Redis, Celery, Nginx, and Postgres services.</br>
+- Elasticsearch: Used for high-speed search functionality, enhancing the user experience by enabling quick article searches.</br>
+- Postgres: The primary database service, responsible for data storage and management, ensuring data integrity and security.</br>
+- Nginx & Reverse Proxy: Handles requests, manages static files, and balances load for efficient service distribution.</br>
+- Celery & Redis: Employed to support asynchronous processing, improving system responsiveness, and functioning as an in-memory data store for optimal service delivery.</br>
+- MailHog: Utilized for email handling in the local environment (not suitable for production!!), providing a solution for email-related functionalities during development.</br>
+- Flower: Used for monitoring and managing Celery tasks. Flower provides a web-based interface for real-time insights into task execution and status.</br>
+In development, we use watchfiles for quick and automatic reloading of Celery and Flower when files change. In production, we've replaced it with a more controlled and robust method, checking the readiness of Celery workers before starting Flower, ensuring a more stable production environment.</br>
+- Tools for Optimization & Security Measures: Tools like flake8, black, isort, pytest, and pytest-cov are utilized for code optimization and test coverage assessment.</br>
+- Swagger for API Documentation: The project uses Swagger, an automated API documentation generator. A PDF link to the documentation provides extensive information about API endpoints, request/response formats, and user interactions.</br>
+
+Code Optimization Tools:</br>
+- Black: Black is a code formatter that aids in maintaining consistent code style throughout the project. It automatically formats code to comply with the project’s defined styling guidelines, ensuring code uniformity and readability across different modules.</br>
+- Isort: Isort is a tool used for Python import sorting. It organizes and optimizes import statements in Python files, enhancing code readability and maintaining a standardized import structure.</br>
+- Flake8: Flake8 is a comprehensive code checker that combines several Python linting tools (such as PyFlakes, pycodestyle, and McCabe) to identify issues in code, including code formatting problems, syntax errors, unused imports, and other potential bugs. It helps maintain code quality and adherence to coding standards.</br>
+
+Django-Specific Practices:</br>
+- Custom User Creation: The project implements a custom user model, which extends the default Django User model. This allows for additional fields, specialized methods, and enhanced user management.</br>
+- Abstract Class Models: The project employs abstract models to serve as base classes for other models in the database. These models encapsulate common fields and functionalities, promoting code reusability and maintaining consistency across various models.</br>
+- UUID Primary Key: Using UUIDs as primary keys improves search performance by decreasing the search time compared to standard auto-incrementing primary keys. This optimization aids in handling large datasets efficiently.</br>
+- Signals: Django signals are utilized to trigger actions on certain events within the application. These events could include user creation, update, or deletion. Signals help automate tasks, allowing for specific actions to be performed when certain conditions are met.</br>
+- Customizing the Admin Site: The admin interface in Django is customized to facilitate user-friendly content management. This customization ensures a more intuitive and efficient interaction for managing data and the backend application.</br>
+- Customized url for the admin page with the variable **ADMIN_URL**.</br>
+- Uploading pictures with the API endpoints.</br>
+
+Unit Testing and Code Coverage:</br>
+- Pytest: Pytest is a robust testing framework used for writing and executing tests in Python. It simplifies test writing and allows for comprehensive test coverage to ensure robust code functionality.</br>
+- Pytest-Cov: Pytest-Cov is a plugin used to measure the code coverage achieved by the test suite. It provides a detailed report on how much of the codebase is covered by the tests, aiding in determining the effectiveness of the test suite.</br>

@@ -40,9 +40,16 @@ nbproject
 _notes
 dwsync.xml
 
+# staticfiles
+staticfiles
+
 # Environmental  variables
 .env
 .venv
+.envs/*
+# we include the local and exmpale production for reference!!
+!.envs/.local/
+!.envs/.production-example/
 
 # Virtual enviroment
 env/
@@ -78,8 +85,21 @@ token.txt
 /.pnp
 .pnp.js
 
-# testing
+# Unit test / coverage reports
 /coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
 
 # production
 /build
