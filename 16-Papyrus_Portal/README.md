@@ -193,7 +193,7 @@ The documentation includes all the endpoints and how to use them. Additionally y
 
 
 
-## Components used for deployment</br>
+## Components used for deployment
 
 1. Nginx: Nginx is a powerful and popular web server that serves as the frontend or reverse proxy for the application. It efficiently handles incoming client requests and distributes them to the appropriate backend servers, like uWSGI. Nginx is known for its speed, scalability, and security, making it an excellent choice for production-grade deployments. For production, you would probably consider Nginx Proxy Manager because it is easier to use and, therefore, manage.</br>
 
@@ -201,6 +201,7 @@ The documentation includes all the endpoints and how to use them. Additionally y
 
 3. For production, you can't use Mailhog, as it is only suitable for development. You would likely replace it with a service like Mailgun.</br>
 
+4. Scripts included for deployment to DigitalOcean. </br>
 </br>
 </br>
 
