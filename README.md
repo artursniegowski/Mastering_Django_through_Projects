@@ -160,7 +160,7 @@ Technologies Used: </br>
 - Components configured for deployment: uWSGI, nginx, docker-compose. </br>
 
 
-## 16-Papyrus_Portal </br>
+## 16-Papyrus_Portal
 The project is an extensive backend service developed using Django REST Framework, dedicated to managing a diverse set of services through an API. The core functionalities of the API include user authentication, article management, and user interaction mechanisms. While it focuses on backend service, the project is designed for integration with front-end systems and encourages user interface development for full application usage. This versatile API serves as an exemplary solution for building publication platforms, offering features akin to those found in popular online publishing platforms, empowering developers to create their own publication services.</br>
 
 Authentication & User Management:</br>

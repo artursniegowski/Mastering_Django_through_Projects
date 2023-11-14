@@ -1,0 +1,9 @@
+# this files will be ignored by Dockerfile
+# for exmaple if we had a command COPY . . 
+# this would copy evertyhing except what is in this file
+
+.idea
+venv
+**/.git
+.gitignore
+.vscode

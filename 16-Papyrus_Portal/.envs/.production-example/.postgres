@@ -1,0 +1,6 @@
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=papyrus-portal-data
+POSTGRES_USER=w0KmTNEoFBb18XDSjVj-DICSQZfdF0k7PFvtTwJ10t8
+POSTGRES_PASSWORD=GArwNQ-pUh_MQmz9daazbqc0mXhUYEVWHEWsgcs6ryo
+DATABASE_URL=postgres://w0KmTNEoFBb18XDSjVj-DICSQZfdF0k7PFvtTwJ10t8:GArwNQ-pUh_MQmz9daazbqc0mXhUYEVWHEWsgcs6ryo@postgres:5432/papyrus-portal-data

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+
+# watchfiles should not be used in production!
+worker_ready(){
+    celery -A papyrus_portal_api.celery inspect ping
+}
+
+until worker_ready; do  
+
+>&2 echo 'Celery workers not available :(' 
+
+sleep 1  
+
+done  
+
+>&2 echo 'Celery workers are available and ready!... :)'
+
+exec celery \
+    -A papyrus_portal_api.celery \
+    -b "${CELERY_BROKER}" \
+    flower \    
+    --basic_auth="${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}"

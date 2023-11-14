@@ -1,0 +1,6 @@
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=papyrus-portal-data
+POSTGRES_USER=testuser
+POSTGRES_PASSWORD=Passwordtest1234
+DATABASE_URL=postgres://testuser:Passwordtest1234@postgres:5432/papyrus-portal-data
