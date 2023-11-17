@@ -2,7 +2,7 @@ services:
   es:
     image: elasticsearch:7.17.9
     environment:
-      - discovery.type=single-node
+      - discovery.type=single-node 
     ports:
       - "9200:9200"
     networks:
