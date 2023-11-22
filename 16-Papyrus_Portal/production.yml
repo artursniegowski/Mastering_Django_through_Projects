@@ -13,7 +13,7 @@ services:
       context: .
       dockerfile: ./docker/production/django/Dockerfile
     command: /start
-    image: papyrus_api
+    image: papyrus_api 
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
