@@ -10,7 +10,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.loc
 # setting the name of the Celery instance, this name will be used to refer
 # to this instance of celery in other parts of the system
 
-app = Celery("papyrus_portal_api") 
+app = Celery("papyrus_portal_api")  
 
 # load the configuration from the Django settings module
 # and the namespace argument is used to avoid
