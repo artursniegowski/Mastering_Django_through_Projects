@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from core_apps.articles.models import Article
 
 
-class Bookmark(models.Model):
+class Bookmark(models.Model): 
     """Bookmark model"""
 
     user = models.ForeignKey(
