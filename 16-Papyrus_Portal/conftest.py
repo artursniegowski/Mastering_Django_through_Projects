@@ -8,7 +8,7 @@ from core_apps.users.tests.factories import UserFactory
 
 # by registering UserFactory
 # we can now use the user_factory fixture in our tests
-register(UserFactory)
+register(UserFactory) 
 
 
 # the fixture creates a normal user using the user_factory
