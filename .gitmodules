@@ -1,3 +1,6 @@
+[submodule "17-Digital_Resume_with_a_shop"]
+	path = 17-Digital_Resume_with_a_shop
+	url = https://github.com/artursniegowski/build-and-deploy-dockerised-django-app-handbook.git
 [submodule "15-Recipe_APP_API"]
 	path = 15-Recipe_APP_API
 	url = https://github.com/artursniegowski/Recipe_APP_API.git
