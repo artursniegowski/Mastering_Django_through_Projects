@@ -1,6 +1,6 @@
 FROM postgres:16-bullseye
 
-COPY ./docker/production/postgres/maintenance /usr/production/bin/maintenance
+COPY ./docker/production/postgres/maintenance /usr/production/bin/maintenance 
 
 RUN chmod +x /usr/production/bin/maintenance/*
  
