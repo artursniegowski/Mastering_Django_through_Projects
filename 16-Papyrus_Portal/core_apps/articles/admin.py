@@ -14,7 +14,7 @@ class ArticleAdmin(admin.ModelAdmin):
         "author",
         "title",
         "slug",
-        "view_count",
+        "view_count", 
     ]
     list_display_links = ["pkid", "author"]
     list_filter = ["created_at", "updated_at"]
