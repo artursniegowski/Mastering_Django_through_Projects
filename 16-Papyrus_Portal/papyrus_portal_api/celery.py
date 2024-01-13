@@ -7,7 +7,7 @@ from django.conf import settings
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.local")
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.production")
 
-# setting the name of the Celery instance, this name will be used to refer
+# setting the name of the Celery instance, this name will be used to refer 
 # to this instance of celery in other parts of the system
 
 app = Celery("papyrus_portal_api")  
