@@ -4,7 +4,7 @@ FROM python:${PYTHON_VERSION} as python
 
 FROM python as python-build-stage
 ARG BUILD_ENVIRONMENT=local 
-
+ 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential \ 
     libpq-dev
