@@ -1,5 +1,5 @@
 -r base.txt
  
 gunicorn==21.2.0,<21.3
-psycopg==3.1.12,<3.2
+psycopg==3.1.12,<3.2 
 whitenoise==6.6.0,<6.7 
