@@ -19,3 +19,6 @@
 [submodule "17-Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization"]
 	path = 17-Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization
 	url = https://github.com/artursniegowski/Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization.git
+[submodule "18-Build-and-Deploy-Dockerised-Django-app-handbook"]
+	path = 18-Build-and-Deploy-Dockerised-Django-app-handbook
+	url = https://github.com/artursniegowski/build-and-deploy-dockerised-django-app-handbook.git

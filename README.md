@@ -237,3 +237,26 @@ This repository is a valuable resource for learners seeking to enhance their Dja
 
 Skills: Django, Django Rest Framework, Python Programming, React, JavaScript</br>
 
+
+## 18-Build-and-Deploy-Dockerised-Django-app-handbook
+This is the ultimate handbook for building and deploying Dockerized Django applications. This repository compiles all the assignments from the esteemed course "Build and Deploy a Dockerised Django Project" available on Udemy: [Link](https://www.udemy.com/course/build-and-deploy-a-dockerised-django-project/). </br>
+
+Key Features:</br>
+- Django Mastery: Explore building a robust e-commerce app leveraging Django's models, views, templates, and forms.</br>
+- Dockerization: Learn to containerize your applications for scalable development and deployment.</br>
+- Asynchronous Processing: Efficiently handle tasks with Celery and Redis for asynchronous operations.</br>
+- Deployment & Scalability: Deploy your Django apps using Nginx, Gunicorn, PostgreSQL, and integrate secure payments with Stripe.</br>
+- Authentication & Authorization: Implement user authentication and authorization seamlessly.</br>
+- Handling Payments: Integrate and securely process payments using the Stripe payment gateway.</br>
+- Testing & Debugging: Ensure functionality and reliability through effective testing and debugging strategies.</br>
+- Performance Optimization: Optimize app performance with caching, query optimization, and load balancing techniques.</br>
+- Github actions - CI/. </br>
+- Action secrets. </br>
+- Logging. </br>
+- Signals. </br>
+- Creating custom Middleware. </br>
+- Defining your sitemap for you web app. </br>  
+- Project ready to be deployed on DigitalOcean. </br>
+
+Repository Structure:
+Each major feature discussed in the course is portrayed in a new branch on Git, making it easier to find the relevant topic. This approach simplifies the process of using the repository as templates for your own projects, allowing you to focus only on the parts that you are interested in.
