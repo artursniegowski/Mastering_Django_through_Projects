@@ -205,35 +205,35 @@ Unit Testing and Code Coverage:</br>
 - Pytest-Cov: Pytest-Cov is a plugin used to measure the code coverage achieved by the test suite. It provides a detailed report on how much of the codebase is covered by the tests, aiding in determining the effectiveness of the test suite.</br>
 
 
-## 17-Advanced Django: Mastering Django and Django Rest Framework Specialization
-This repository houses assignments completed as part of the Advanced Django: Mastering Django and Django Rest Framework Specialization offered on Coursera. The specialization comprises four courses:
+## 17-Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization
+This repository houses assignments completed as part of the Advanced Django: Mastering Django and Django Rest Framework Specialization offered on Coursera. The specialization comprises four courses:</br>
 
-1. Advanced Django: Building a Blog
-- Create custom filters and templates
-- Optimize performance through caching and database operations
-- Authenticate users with Google
-- Explore Django and Bootstrap integration
-- Implement Django Debug Toolbar and Custom User models
+1. Advanced Django: Building a Blog</br>
+- Create custom filters and templates</br>
+- Optimize performance through caching and database operations</br>
+- Authenticate users with Google</br>
+- Explore Django and Bootstrap integration</br>
+- Implement Django Debug Toolbar and Custom User models</br>
 
-2. Advanced Django: Introduction to Django Rest Framework
-- Build APIs with Django Rest Framework
-- Utilize serializers, viewsets, routers, and authentication mechanisms
-- Work with JSON data and different types of related fields
-- Document APIs using Swagger UI and Django REST GUI
+2. Advanced Django: Introduction to Django Rest Framework</br>
+- Build APIs with Django Rest Framework</br>
+- Utilize serializers, viewsets, routers, and authentication mechanisms</br>
+- Work with JSON data and different types of related fields</br>
+- Document APIs using Swagger UI and Django REST GUI</br>
 
-3. Advanced Django: Advanced Django Rest Framework
-- Optimize Django Rest Framework performance with caching, throttling, and filtering
-- Write tests for APIs and integrate ReactJS
-- Implement JWT authentication and Django signals
-- Use Celery and Redis for task queuing and scheduling
+3. Advanced Django: Advanced Django Rest Framework</br>
+- Optimize Django Rest Framework performance with caching, throttling, and filtering</br>
+- Write tests for APIs and integrate ReactJS</br>
+- Implement JWT authentication and Django signals</br>
+- Use Celery and Redis for task queuing and scheduling</br>
 
-4. Advanced Django: External APIs and Task Queuing
-- Connect to external APIs and parse data
-- Implement task queuing with Celery and Redis
-- Utilize Django skills to create portfolio-quality projects
-- Explore asynchronous tasks and periodic task scheduling with Celery Beat
+4. Advanced Django: External APIs and Task Queuing</br>
+- Connect to external APIs and parse data</br>
+- Implement task queuing with Celery and Redis</br>
+- Utilize Django skills to create portfolio-quality projects</br>
+- Explore asynchronous tasks and periodic task scheduling with Celery Beat</br>
 
-This repository is a valuable resource for learners seeking to enhance their Django and Django Rest Framework skills. It offers a comprehensive collection of assignments, covering various advanced topics and practical applications in web development.
+This repository is a valuable resource for learners seeking to enhance their Django and Django Rest Framework skills. It offers a comprehensive collection of assignments, covering various advanced topics and practical applications in web development.</br>
 
-Skills: Django, Django Rest Framework, Python Programming, React, JavaScript
+Skills: Django, Django Rest Framework, Python Programming, React, JavaScript</br>
 
