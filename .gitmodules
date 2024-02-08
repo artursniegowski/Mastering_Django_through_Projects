@@ -16,3 +16,6 @@
 [submodule "05-Financial_Blog_Wagtail_CMS"]
 	path = 05-Financial_Blog_Wagtail_CMS
 	url = https://github.com/artursniegowski/Financial_Blog_Wagtail_CMS.git
+[submodule "17-Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization"]
+	path = 17-Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization
+	url = https://github.com/artursniegowski/Advanced-Django-Mastering-Django-and-Django-Rest-Framework-Specialization.git

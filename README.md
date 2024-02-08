@@ -3,6 +3,11 @@ Mastering Django through Projects is a comprehensive repository that offers a se
 Each project in the repository is designed to increase in difficulty, providing a structured and progressive learning experience. The projects are built with Django and Django REST framework and cover a variety of topics such as API development, back-end development, and full-stack development. By completing these projects, you can gain a deeper understanding of Django, including its architecture, best practices, and how to effectively use it to build robust and scalable web applications. Additionally, you can develop skills in testing and debugging. </br>
 The API projects, in particular, are designed to be RESTful, adhering to best practices and industry standards. This repository is meant for experienced developers looking to hone their skills. Mastering Django through Projects is an excellent resource for anyone looking to improve their Django knowledge and become a more effective Django developer.</br>
 
+## Important
+If you choose to clone this repository, be aware that it also contains submodules. To fetch them as well, you need to run these commands: </br>
+`git submodule init` </br>
+`git submodule update` </br>
+
 
 ## 01-Django_polls_reusable_app
 Polls is a Django app to conduct web-based polls. For each question, visitors can choose between a fixed number of answers. It is an example of using Django-apps as pacakages. The poll-App includes also Django unity test cases.</br> 
@@ -198,3 +203,37 @@ Django-Specific Practices:</br>
 Unit Testing and Code Coverage:</br>
 - Pytest: Pytest is a robust testing framework used for writing and executing tests in Python. It simplifies test writing and allows for comprehensive test coverage to ensure robust code functionality.</br>
 - Pytest-Cov: Pytest-Cov is a plugin used to measure the code coverage achieved by the test suite. It provides a detailed report on how much of the codebase is covered by the tests, aiding in determining the effectiveness of the test suite.</br>
+
+
+## 17-Advanced Django: Mastering Django and Django Rest Framework Specialization
+This repository houses assignments completed as part of the Advanced Django: Mastering Django and Django Rest Framework Specialization offered on Coursera. The specialization comprises four courses:
+
+1. Advanced Django: Building a Blog
+- Create custom filters and templates
+- Optimize performance through caching and database operations
+- Authenticate users with Google
+- Explore Django and Bootstrap integration
+- Implement Django Debug Toolbar and Custom User models
+
+2. Advanced Django: Introduction to Django Rest Framework
+- Build APIs with Django Rest Framework
+- Utilize serializers, viewsets, routers, and authentication mechanisms
+- Work with JSON data and different types of related fields
+- Document APIs using Swagger UI and Django REST GUI
+
+3. Advanced Django: Advanced Django Rest Framework
+- Optimize Django Rest Framework performance with caching, throttling, and filtering
+- Write tests for APIs and integrate ReactJS
+- Implement JWT authentication and Django signals
+- Use Celery and Redis for task queuing and scheduling
+
+4. Advanced Django: External APIs and Task Queuing
+- Connect to external APIs and parse data
+- Implement task queuing with Celery and Redis
+- Utilize Django skills to create portfolio-quality projects
+- Explore asynchronous tasks and periodic task scheduling with Celery Beat
+
+This repository is a valuable resource for learners seeking to enhance their Django and Django Rest Framework skills. It offers a comprehensive collection of assignments, covering various advanced topics and practical applications in web development.
+
+Skills: Django, Django Rest Framework, Python Programming, React, JavaScript
+
