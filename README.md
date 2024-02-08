@@ -250,7 +250,7 @@ Key Features:</br>
 - Handling Payments: Integrate and securely process payments using the Stripe payment gateway.</br>
 - Testing & Debugging: Ensure functionality and reliability through effective testing and debugging strategies.</br>
 - Performance Optimization: Optimize app performance with caching, query optimization, and load balancing techniques.</br>
-- Github actions - CI/. </br>
+- Github actions - CI/CD. </br>
 - Action secrets. </br>
 - Logging. </br>
 - Signals. </br>
