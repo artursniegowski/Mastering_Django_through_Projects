@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 
 # watchfiles should not be used in production!
-worker_ready(){
+worker_ready(){ 
     celery -A papyrus_portal_api.celery inspect ping 
 }
 
