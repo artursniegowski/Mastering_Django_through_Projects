@@ -9,7 +9,7 @@ services:
       - reverseproxy_nw
 
   api: &api
-    build:
+    build: 
       context: .
       dockerfile: ./docker/production/django/Dockerfile
     command: /start
