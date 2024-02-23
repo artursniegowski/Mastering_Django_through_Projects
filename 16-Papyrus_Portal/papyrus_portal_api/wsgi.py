@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 # TODO: change the djanog settings file for production
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.local")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.local") 
 # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.production")
 
 application = get_wsgi_application()
