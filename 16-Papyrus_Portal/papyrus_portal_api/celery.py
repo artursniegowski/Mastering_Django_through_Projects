@@ -16,7 +16,7 @@ app = Celery("papyrus_portal_api")
 # and the namespace argument is used to avoid
 # clashes between the celery configuration and Django configuration
 app.config_from_object("django.conf:settings", namespace="CELERY") 
- 
+  
 # the autodiscover taks is used to autmaticly discoer tasks in all
 # the installed Django applications
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
