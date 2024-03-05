@@ -9,7 +9,7 @@ def main():
     # TODO: change the djanog settings file fro production
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "papyrus_portal_api.settings.local")
     try:
-        from django.core.management import execute_from_command_line
+        from django.core.management import execute_from_command_line 
     except ImportError as exc:
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "
