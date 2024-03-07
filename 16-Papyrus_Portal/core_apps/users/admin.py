@@ -11,7 +11,7 @@ User = get_user_model()
 
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
-
+ 
     # add_form = UserCreationForm  # no need to define as same name as default
     # form = UserChangeForm  # no need to define as same name as default
     ordering = ["email"]
