@@ -7,5 +7,5 @@ CELERY_BROKER=redis://redis:6379/0
 CELERY_FLOWER_USER=admin
 CELERY_FLOWER_PASSWORD=Pass123456
 SMTP_MAILGUN_PASSWORD=somethingSecure
-DOMAIN=www.yourdomainname.com
+DOMAIN=www.yourdomainname.com 
 SIGNING_KEY=WLp9pRdgkZ3250PmWN2QVTPaFzViGnI0x676wgHwtOt50nVqVOY
