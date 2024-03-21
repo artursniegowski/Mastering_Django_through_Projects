@@ -4,6 +4,6 @@
 
 .idea
 venv
-**/.git
+**/.git 
 .gitignore
 .vscode
