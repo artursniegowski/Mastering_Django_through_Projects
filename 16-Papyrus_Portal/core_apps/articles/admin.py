@@ -8,7 +8,7 @@ from .models import Article, ArticleView, Clap
 
 class ArticleAdmin(admin.ModelAdmin):
     """Define the admin pages for Article."""
-
+ 
     list_display = [
         "pkid",
         "author",
