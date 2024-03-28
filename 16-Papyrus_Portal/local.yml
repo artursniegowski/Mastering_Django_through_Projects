@@ -11,7 +11,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: ./docker/local/django/Dockerfile
+      dockerfile: ./docker/local/django/Dockerfile 
     volumes:
       - .:/app:z
       - static_volume:/app/staticfiles
