@@ -10,7 +10,7 @@ fi
 git archive --format tar --output ./project.tar main
 
 ## then we going to upload this project.tar file to the server, 
-echo 'Uploading project..........Be Patient!'
+echo 'Uploading project..........Be Patient!' 
 rsync ./project.tar root@$DIGITAL_OCEAN_IP_ADDRESS:/tmp/project.tar
 echo 'Upload complete...'
 
