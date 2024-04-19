@@ -13,7 +13,7 @@ down:
 show-logs:
 	docker-compose -f local.yml logs
 
-show-logs-api:
+show-logs-api: 
 	docker-compose -f local.yml logs api
 
 show-logs-api-continuosly:
