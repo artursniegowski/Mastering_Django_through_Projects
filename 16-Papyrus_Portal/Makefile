@@ -8,7 +8,7 @@ up-continuosly:
 	docker-compose -f local.yml up 
 
 down:  
-	docker-compose -f local.yml down
+	docker-compose -f local.yml down 
 
 show-logs:
 	docker-compose -f local.yml logs
