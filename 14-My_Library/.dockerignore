@@ -6,7 +6,7 @@
 .git
 .gitignore
 # Docker
-.docker
+.docker 
 
 # Python
 # this would be porbably the same
