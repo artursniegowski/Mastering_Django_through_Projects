@@ -22,6 +22,3 @@
 [submodule "18-Build-and-Deploy-Dockerised-Django-app-handbook"]
 	path = 18-Build-and-Deploy-Dockerised-Django-app-handbook
 	url = https://github.com/artursniegowski/build-and-deploy-dockerised-django-app-handbook.git
-[submodule "19-Dockerized-FullStack-ChatVibe"]
-	path = 19-Dockerized-FullStack-ChatVibe
-	url = https://github.com/artursniegowski/ChatVibe
