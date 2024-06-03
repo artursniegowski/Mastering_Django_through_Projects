@@ -10,7 +10,7 @@ up-continuosly:
 down:
 	docker-compose -f local.yml down 
 
-show-logs:
+show-logs: 
 	docker-compose -f local.yml logs
 
 show-logs-api: 
