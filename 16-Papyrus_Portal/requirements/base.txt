@@ -10,7 +10,7 @@ phonenumbers==8.13.23,<8.14
 drf-yasg==1.21.7,<1.22  
 Pillow==10.1.0,<10.2 
 argon2-cffi==23.1.0,<23.2
-pytz==2023.3,<2023.4
+pytz==2023.3,<2023.4 
 django-taggit==4.0.0,<4.1
 redis==5.0.1,<5.1
 celery==5.3.4,<5.4
