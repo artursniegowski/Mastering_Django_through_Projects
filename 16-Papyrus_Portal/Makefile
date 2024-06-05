@@ -6,7 +6,7 @@ up:
 
 up-continuosly:
 	docker-compose -f local.yml up 
-
+ 
 down:
 	docker-compose -f local.yml down 
 
