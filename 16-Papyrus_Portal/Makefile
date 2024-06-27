@@ -3,7 +3,7 @@ build:
 
 up:
 	docker-compose -f local.yml up -d
-
+ 
 up-continuosly:
 	docker-compose -f local.yml up 
  
