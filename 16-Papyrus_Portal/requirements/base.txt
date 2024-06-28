@@ -21,4 +21,3 @@ dj-rest-auth==5.0.1,<5.1
 djangorestframework-simplejwt==5.3.0,<5.4
 django-elasticsearch-dsl==8.0.0,<8.1
 django-elasticsearch-dsl-drf==0.22.5,<0.23
- 
