@@ -1,0 +1,9 @@
+# the .dev-example/ has to be cahnged to .dev/
+# .dev-example/.postgres is a fall back file if the enviroment file .dev/.postgres dosent exists
+# default values in the .dev-example/.postgres file.
+
+POSTGRES_DB_HOST=db
+POSTGRES_DB=database_name
+POSTGRES_USER=changeme_dbuser
+POSTGRES_PASSWORD=changeme_password
+POSTGRES_PORT=5432

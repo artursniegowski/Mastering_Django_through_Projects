@@ -1,0 +1,16 @@
+# the .dev-example/ has to be cahnged to .dev/
+# .dev-example/.django is a fall back file if the enviroment file .dev/.django dosent exists
+# default values in the .dev-example/.django file.
+
+DJANGO_SECRET_KEY='django-insecure-q8x%r=5hpm6m$9-*zsl%%c)^5qo7#k$w(p8s+)jelwssq16ph9'
+# this can be a comma seperated list like 127.0.0.1,162.1.1.1,my-page.com
+DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost
+DJANGO_DEBUG=1
+
+# if using redis
+# CELERY_BROKER_URL=redis://redis:6379/0
+CELERY_RESULT_BACKEND=redis://redis:6379/0
+
+# if using rabbitmq
+# default username and password for rabbitmq is guest
+CELERY_BROKER_URL='amqp://guest:guest@rabbitmq:5672'

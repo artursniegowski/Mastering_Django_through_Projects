@@ -292,4 +292,25 @@ Key Features of ChatVibe include:
 - dockerized approach - microservices
 
 
-ChatVibe is designed to be modular, scalable, and customizable, allowing developers to extend its functionality according to their specific requirements. Whether used for team collaboration, community building, or social networking, ChatVibe provides a robust and versatile platform for real-time communication.
+ChatVibe is designed to be modular, scalable, and customizable, allowing developers to extend its functionality according to their specific requirements. Whether used for team collaboration, community building, or social networking, ChatVibe provides a robust and versatile platform for real-time communication.</br>
+
+## 20-Mastering-Celery
+
+Mastering_Celery is a comprehensive project designed to demonstrate the capabilities and configurations of Celery, a powerful distributed task queue. Built using Docker Compose for seamless deployment, the project encompasses various services: Django Backend, PostgreSQL Database, Celery Services (standalone and regular), Message Brokers (Redis and RabbitMQ), Monitoring and Management (Flower), Proxy (nginx).
+
+Key Features:</br>
+- Demonstrates task prioritization, chaining, grouping, and queue usage.</br>
+- Illustrates scheduling, time intervals, exception handling, and task routing. </br>
+- Implements rate limiting, passing arguments, and returning results from tasks.</br>
+- Shows synchronous and asynchronous task execution.</br>
+- Worker Types: standalone lightweight Celery worker and regular workers.</br>
+- Monitoring and Management: Flower.</br>
+- Message Brokers Redis and RabbitMQ. </br>
+- Error Handling and Monitoring. </br>
+- Advanced Configurations.</br>
+- Scheduled Tasks, Intervals, Periodic Tasks.</br>
+- Integrates Sentry for monitoring Celery tasks and handling errors effectively.</br>
+
+
+Mastering_Celery serves as a comprehensive resource for learning and showcasing the capabilities of Celery. It provides extensive examples and configurations, making it a valuable tool for understanding task queue management, asynchronous processing, and distributed systems in real-world applications. By leveraging Docker and Docker Compose, the project ensures ease of setup and deployment across different environments, fostering practical learning and experimentation with Celery.
+

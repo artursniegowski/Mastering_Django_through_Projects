@@ -1,0 +1,147 @@
+services:
+  backend:
+    container_name: django-backend
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: ./docker/Dockerfile
+    # TODO: use expose later, so the contianer will not be accesible to public
+    # and only in the docker network, which will be enough for nginx
+    # expose:
+    #   - 8000
+    ports:
+      - "8000:8000"
+    volumes:
+    # TODO: dont forget to delete for production, you dont want to mirror ./backend/app:/app:z, this is only for local dev
+      - ./backend/app:/app:z  # mirrors the changes made in the app folder to the container an vice versa
+      - dev-static-data:/vol/web
+    # command: >
+    #   sh -c "python manage.py wait_for_db &&
+    #          python manage.py collectstatic --noinput &&
+    #          python manage.py migrate &&
+    #          python manage.py runserver 0.0.0.0:8000"
+    # not needed as it is defined in the dockerfile, just to make it easier to read
+    command: django-run.sh
+    env_file:
+      - ./.envs/.dev/.django
+      - ./.envs/.dev/.sentry
+      - ./.envs/.dev/.postgres
+    depends_on:
+      - db
+      - redis
+
+  db:
+    container_name: db-postgres
+    restart: unless-stopped
+    build:
+      context: ./database
+      dockerfile: ./docker/Dockerfile
+    # TODO: use expose later, so the contianer will not be accesible to public
+    # and only in the docker network, which will be enough for nginx
+    # expose:
+    #   - 5432
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    env_file:
+      - ./.envs/.dev/.postgres
+
+  nginx:
+    container_name: nginx-proxy
+    restart: unless-stopped
+    build:
+      context: ./proxy
+      dockerfile: ./docker/dev/Dockerfile
+    ports:
+      - "8080:80"
+      - "80:80"
+    volumes:
+      - dev-static-data:/vol/static
+    env_file:
+      - ./.envs/.dev/.nginx
+    depends_on:
+      - backend
+
+
+  redis:
+    container_name: redis-message-broker
+    restart: unless-stopped
+    build:
+      context: ./message_broker
+      dockerfile: ./redis/docker/Dockerfile
+    # not needed as this is the default port that is exposed by the service
+    # expose:
+    #   - 6379
+
+  flower:
+    container_name: flower-monitoring
+    restart: unless-stopped
+    build:
+      context: ./celery_monitoring_flower
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - "5555:5555"
+    env_file:
+      - ./.envs/.dev/.django
+
+
+  rabbitmq:
+    container_name: rabbitmq-message-broker
+    restart: unless-stopped
+    build:
+      context: ./message_broker
+      dockerfile: ./rabbitmq/docker/Dockerfile
+    # not needed as this is the default port that is exposed by the service
+    # expose:
+    #   - 5672
+    ports:
+      # - "5672:5672"
+      # this port is to see the api in the browser - the manager
+      - "15672:15672"
+
+
+  celery_worker:
+    container_name: celery-worker
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: ./docker/Dockerfile
+    volumes:
+    # TODO: dont forget to delete for production, you dont want to mirror ./backend/app:/app:z, this is only for local dev
+      - ./backend/app:/app:z  # mirrors the changes made in the app folder to the container an vice versa
+      # Only include if the worker needs access to static/media files
+      # - dev-static-data:/vol/web
+    command: celery-start.sh
+    env_file:
+      - ./.envs/.dev/.django
+      - ./.envs/.dev/.sentry
+      - ./.envs/.dev/.postgres
+    depends_on:
+      - redis
+      - backend
+      - rabbitmq
+
+
+  celery_worker_standalone:
+    container_name: celery-worker-standalone
+    restart: unless-stopped
+    build:
+      context: ./celery_worker_standalone
+      dockerfile: ./docker/Dockerfile
+    command: celery-start.sh
+    volumes:
+    # TODO: dont forget to delete for production, you dont want to mirror the changes, this is only for local dev
+      - ./celery_worker_standalone/standalone_app:/standalone_app:z
+    env_file:
+    # need teh CELERY env variables
+      - ./.envs/.dev/.django
+      - ./.envs/.dev/.sentry
+    depends_on:
+      - redis
+      - backend
+      - rabbitmq
+
+volumes:
+  dev-static-data:
+  postgres-data:

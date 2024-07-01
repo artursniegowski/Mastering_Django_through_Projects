@@ -1,0 +1,3 @@
+# After creating a django project you need to obtain your own sentry dsn
+# https://sentry.io/welcome/
+SENTRY_SDK_DSN="https://your_sentry@your_sentry.ingest.us.sentry.io/your_sentry"

@@ -1,0 +1,5 @@
+celery==5.4.0,<5.5
+redis==5.0.6,<5.1
+# for sentry integration
+sentry-sdk==2.7.1,<2.8
+requests==2.32.3,<2.33

@@ -1,0 +1,26 @@
+upstream backend {
+    # port 8000 - defined in docker compose
+    server  ${BACKEND_SERVICE}:${BACKEND_PORT};
+}
+
+server {
+    listen ${LISTEN_PORT};
+    server_name ${DOMAIN_NAME};
+    client_max_body_size 50M;
+
+    # backend service 
+    location / {
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $host;
+        proxy_pass http://backend;
+        proxy_redirect off;
+    }
+
+    # serving static files and media files from django backend - mounted volumes from nginx
+    location /static {
+        alias /vol/static;
+    }
+
+}

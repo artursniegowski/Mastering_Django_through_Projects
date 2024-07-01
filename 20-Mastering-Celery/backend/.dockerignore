@@ -1,0 +1,45 @@
+# this files will be ignored by Dockerfile
+# for exmaple if we had a command COPY . . 
+# this woudl copy evertyhing except what is in this file
+
+# The .dockerignore needs to be in the root directory/context folder as specified in the docker-compose.yml
+
+# Git
+.git
+.gitignore
+# Docker
+.docker
+
+# Ignore other files or directories not relevant to Docker build
+*.log
+*.swp
+.DS_Store
+
+# Python
+# this would be porbably the same
+# **/__pypackages__/ - unfortunately this is not supported by docker
+app/__pypackages__/
+app/*/__pypackages__/
+app/*/*/__pypackages__/
+app/*/*/*/__pypackages__/
+app/*/*/*/*/__pypackages__/
+
+# Ignore files and directories specific to Django backend
+__pycache__
+*.pyc
+
+# Coverage files
+app/coverage.xml
+app/.coverage
+app/htmlcov/
+
+# enviroments
+# for files
+.env
+.venv
+# for directories
+.env/
+.venv/
+env/
+venv/
+ENV/
