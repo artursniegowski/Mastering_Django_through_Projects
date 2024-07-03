@@ -2,6 +2,6 @@
 
 flake8==7.0.0,<7.1
 black==24.2.0,<24.3
-isort==5.13.2,<5.14
+isort==5.13.2,<5.14 
 coverage==7.4.3,<7.5
 django-debug-toolbar==4.3.0,<4.4
