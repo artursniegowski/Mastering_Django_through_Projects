@@ -8,7 +8,7 @@ build-no-cache:
 up:
 	docker-compose up -d
 
-up-attached:
+up-attached: 
 	docker-compose up
 
 down:
