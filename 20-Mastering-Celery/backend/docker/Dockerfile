@@ -3,7 +3,7 @@ LABEL maintainer="artursniegowski"
 
 ENV PYTHONDONTWRITEBYTECODE 1 
 
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED 1 
 
 COPY ./requirements /temp/requirements/ 
 COPY ./app /app
