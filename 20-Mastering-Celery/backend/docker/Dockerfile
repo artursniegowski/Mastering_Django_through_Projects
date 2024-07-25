@@ -1,9 +1,9 @@
 FROM python:3.12-alpine
 LABEL maintainer="artursniegowski"
 
-ENV PYTHONDONTWRITEBYTECODE 1 
+ENV PYTHONDONTWRITEBYTECODE 1
 
-ENV PYTHONUNBUFFERED 1 
+ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements /temp/requirements/ 
 COPY ./app /app
