@@ -5,7 +5,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 ENV PYTHONUNBUFFERED 1
 
-COPY ./requirements /temp/requirements/ 
+COPY ./requirements /temp/requirements/
 COPY ./app /app
 COPY ./docker/scripts/django/run.sh /scripts/django-run.sh
 COPY ./docker/scripts/celery/start.sh /scripts/celery-start.sh
