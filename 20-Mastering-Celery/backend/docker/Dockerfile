@@ -14,7 +14,6 @@ WORKDIR /app
 
 EXPOSE 8000
 
-
 # adding dep to run psycopg: postgresql-libs postgresql-dev gcc musl-dev
 RUN apk add --update --no-cache postgresql-dev && \
     apk add --update --no-cache --virtual .temp-build-deps gcc musl-dev postgresql-libs && \
