@@ -40,7 +40,7 @@ black-check-exec:
 	docker-compose exec backend sh -c "black --check --exclude=migrations ."
 
 black-diff:
-	docker-compose run --rm backend sh -c "black --diff --exclude=migrations ."
+	docker-compose run --rm backend sh -c "black --diff --exclude=migrations ." 
 
 black-diff-exec:
 	docker-compose exec backend sh -c "black --diff --exclude=migrations ."
