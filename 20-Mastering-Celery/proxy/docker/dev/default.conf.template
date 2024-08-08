@@ -5,7 +5,7 @@ upstream backend {
 
 server {
     listen ${LISTEN_PORT};
-    server_name ${DOMAIN_NAME};
+    server_name ${DOMAIN_NAME}; 
     client_max_body_size 50M;
 
     # backend service 
