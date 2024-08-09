@@ -8,7 +8,7 @@
 .git
 .gitignore
 # Docker
-.docker
+.docker 
 
 # Ignore other files or directories not relevant to Docker build
 *.log
