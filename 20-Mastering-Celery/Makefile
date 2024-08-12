@@ -1,5 +1,5 @@
 ### docker commands - START ### 
-build:
+build: 
 	docker-compose build
 
 build-no-cache:
