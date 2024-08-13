@@ -11,7 +11,7 @@ up:
 up-attached: 
 	docker-compose up
 
-down:
+down: 
 	docker-compose down
 
 down-remove-volumes:
