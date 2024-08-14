@@ -9,7 +9,7 @@ up:
 	docker-compose up -d 
  
 up-attached: 
-	docker-compose up
+	docker-compose up 
 
 down: 
 	docker-compose down
