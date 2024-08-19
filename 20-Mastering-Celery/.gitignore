@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,django,react,reactnative
 
 ### Django ###
-*.log
+*.log 
 *.pot
 *.pyc 
 __pycache__/
