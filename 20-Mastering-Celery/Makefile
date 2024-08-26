@@ -1,5 +1,5 @@
 ### docker commands - START ### 
-build: 
+build:
 	docker-compose build
 
 build-no-cache:
@@ -8,7 +8,7 @@ build-no-cache:
 up:
 	docker-compose up -d
  
-up-attached: 
+up-attached:
 	docker-compose up 
 
 down: 
