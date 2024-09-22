@@ -5,7 +5,7 @@ build:
 build-no-cache:
 	docker-compose build --no-cache
 
-up: 
+up:
 	docker-compose up -d
 
 up-attached:
